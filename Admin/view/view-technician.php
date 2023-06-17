@@ -87,7 +87,7 @@ $row = mysqli_fetch_assoc($result2);
 
 <?php
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="technician.php";</script>';
+    echo '<script> location.href="../technician.php";</script>';
 }
 
 //To update technician_tb table data

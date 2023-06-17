@@ -2,7 +2,7 @@
 
 session_start();
 
-include('../DBConnection.php');
+include('../../DBConnection.php');
 ?>
 
 <!doctype html>
@@ -29,7 +29,7 @@ include('../DBConnection.php');
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">Quantity</label>
-                        <input type="text" class="form-control" name="quantity" >
+                        <input type="number" class="form-control" name="quantity" >
                     </div>
                     <div class="col-md-4">
                         <label for="inputState" class="form-label">Price</label>
@@ -75,7 +75,7 @@ if (isset($_REQUEST['done'])) {
     $date = $_REQUEST['assign_date'];
     $file_name = $_FILES['myfile']['name'];
     $file_tmp_name = $_FILES['myfile']['tmp_name'];
-    if (move_uploaded_file($file_tmp_name, "../products_image/" . $file_name)) {
+    if (move_uploaded_file($file_tmp_name, "../../products_image/" . $file_name)) {
 
         $sql = "INSERT INTO product(name,quantity,price,selling_price,dop,image) VALUES ('$name','$quantity','$price','$sprice','$date','$file_name')";
 
@@ -84,10 +84,10 @@ if (isset($_REQUEST['done'])) {
             // $sql = "DELETE FROM serviceassign where rid=$rid";   //To delete row from serviceassign table
             // $result = mysqli_query($conn, $sql);
             echo '<script> window.alert("Data Update Succesfully")</script>';
-            echo '<script> location.href="asset.php";</script>';
+            echo '<script> location.href="../products.php";</script>';
         } else {
             echo '<script> window.alert("Unable to update data")</script>';
-            echo '<script> location.href="asset.php";</script>';
+            echo '<script> location.href="../products.php";</script>';
         }
     } else {
         echo '<script> window.alert("Unable to upload file")</script>';
@@ -97,7 +97,7 @@ if (isset($_REQUEST['done'])) {
 
 //To close the page
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="asset.php";</script>';
+    echo '<script> location.href="../products.php";</script>';
 }
 
 ?>

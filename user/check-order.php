@@ -29,7 +29,7 @@ if (mysqli_num_rows($result) > 0) {
                 <p>$<?php echo $row['selling_price'] ?></p>
             </div>
             <div class="col-md-auto">
-                <p>Delivery on Sep 02,2022</p>
+                <p>Delivery on Sep 02,2023</p>
                 <p><small> Your Item is on the way</small></p>
             </div>
         </div>

@@ -37,7 +37,7 @@ $totaltech=$row['emp'];
           <h4 class="card-title">
             <?php echo $submitrequest; ?>
           </h4>
-          <a class="btn text-white" href="userrequest.php">View</a>
+          <a class="btn text-white" href="user-request.php">View</a>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@ $totaltech=$row['emp'];
           <h4 class="card-title">
             <?php echo $assignwork; ?>
           </h4>
-          <a class="btn text-white" href="workorder.php">View</a>
+          <a class="btn text-white" href="work-order.php">View</a>
         </div>
       </div>
     </div>

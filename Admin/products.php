@@ -89,6 +89,6 @@ if(isset($_REQUEST['delete'])){
 
   ?>
   </div> <!--end row-->
-  </div> <!--end Main container-->
-
-  <?php include('../layout/footer.php'); ?> <!--footer-->
+</div> <!--end Main container-->
+</div>
+<?php include('../layout/footer.php'); ?> <!--footer-->
