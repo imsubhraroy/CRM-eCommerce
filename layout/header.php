@@ -14,7 +14,7 @@
 
   <!-- custom css -->
   <!-- <link rel="stylesheet" href="../../CSS/"> -->
-  <link rel="stylesheet" href="../../OSMS/CSS/custom.css">
+  <link rel="stylesheet" href="./CSS/custom.css">
 
   <!-- <style>
     ion-icon {
@@ -29,7 +29,7 @@
     <!-- start nav -->
     <div class="container-fluid">
       <!-- star container -->
-      <a class="navbar-brand fs-2" href="#"><img class="logo rounded" src="../../OSMS/IMAGES/logo.jpg" alt="LOGO">OSMS</a> <!-- LOGO -->
+      <a class="navbar-brand fs-2" href="#"><img class="logo rounded" src="./IMAGES/logo.jpg" alt="LOGO">OSMS</a> <!-- LOGO -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

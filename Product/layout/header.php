@@ -13,7 +13,7 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
      <!-- custom css -->
-  <link rel="stylesheet" href="../../OSMS/CSS/custom.css">
+  <link rel="stylesheet" href="../CSS/custom.css">
 
   <!-- <style>
     ion-icon{
@@ -26,7 +26,7 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-info">     <!-- start nav -->
     <div class="container-fluid">                                          <!-- star container -->
-      <a class="navbar-brand" href="#"><img class="logo rounded" src="../../OSMS/IMAGES/logo.jpg" alt="LOGO">OSMS</a>   <!-- LOGO -->
+      <a class="navbar-brand" href="#"><img class="logo rounded" src="../IMAGES/logo.jpg" alt="LOGO">OSMS</a>   <!-- LOGO -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
