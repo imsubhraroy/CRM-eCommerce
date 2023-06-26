@@ -1,7 +1,7 @@
 <?php
+    session_start();
     include('../DBConnection.php');
 
-    session_start();
 
     if(isset($_REQUEST['tlogin'])){
         $email=$_REQUEST['tEmail'];

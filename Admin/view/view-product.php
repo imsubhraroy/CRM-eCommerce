@@ -1,6 +1,6 @@
 <?php
-include('../../DBConnection.php'); //Database connection
 session_start();
+include('../../DBConnection.php'); //Database connection
 
 include('../layout/isadmin.php');
 

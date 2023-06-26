@@ -45,7 +45,6 @@
             <a class="nav-link" href="../product/products.php">Product</a>
           </li>
           <?php  //To check if the user is login or not
-          session_start();
           if (!isset($_SESSION['is_login'])) {
           ?>
             <li class="nav-item px-2">

@@ -1,6 +1,7 @@
-
+<?php session_start(); ?>
   <!--start Navigation -->
-    <?php include('layout/header.php') ?>
+    <?php
+    include('layout/header.php') ?>
   <!--End Navigation-->
 
   <section class="jumbotron back-image">
@@ -11,6 +12,7 @@
 
       <!--To check if user is ligin or not-->
       <?php
+      
       if (!isset($_SESSION['is_login'])) {
       ?>
         <a href="login.php" class="btn btn-success mr-4">Sign In</a>

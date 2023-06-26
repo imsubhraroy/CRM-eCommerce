@@ -1,10 +1,10 @@
 <?php
+session_start();
 define('PAGE', 'checkstatus');
 define('TITLE', 'checkstatus');
 include('../DBConnection.php');
 include('layout/profileheader.php');
 
-// session_start();
 
 
 //enter id section

@@ -1,4 +1,5 @@
 <?php
+session_start();
 define('PAGE', 'Service');
 define('TITLE', 'success');
 include('../DBConnection.php');

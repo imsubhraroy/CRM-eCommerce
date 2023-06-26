@@ -1,6 +1,6 @@
 <?php
-    include('DBConnection.php'); //database connection
     session_start();
+    include('DBConnection.php'); //database connection
 
     //To check the value is present in the signup table or not
     if(isset($_REQUEST['rlogin'])){

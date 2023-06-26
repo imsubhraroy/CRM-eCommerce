@@ -1,10 +1,10 @@
 <?php
+session_start();
 define('PAGE', 'servicedone');
 define('TITLE', 'servicedone');
 include('../DBConnection.php');
 include('layout/profileheader.php');
 
-// session_start();
 echo '<div class="col-sm-9 col-md-10 mt-5 ms-5">
     <div>
         <p class="mb-5"><b>Note:</b><small> Shows only services that are completed by our Technicians</small></p>

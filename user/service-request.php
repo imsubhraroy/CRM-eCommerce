@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 
 define('PAGE', 'servicerequest');
 define('TITLE', 'Request_Setvice');

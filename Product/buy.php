@@ -1,6 +1,6 @@
 <?php
 
-// session_start();
+session_start();
 
 include('../DBConnection.php');
 include('layout/header.php');

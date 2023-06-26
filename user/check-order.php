@@ -1,10 +1,10 @@
 <?php
+session_start();
 define('PAGE', 'checkorder');
 define('TITLE', 'checkorder');
 include('../DBConnection.php');
 include('layout/profileheader.php');
 
-// session_start();
 echo '<div class="col-sm-auto col-md-10 mt-3 ms-auto">';
 
 $uid = $_SESSION['is_login'];

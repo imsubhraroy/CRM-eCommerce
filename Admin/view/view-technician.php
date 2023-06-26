@@ -1,6 +1,6 @@
 <?php
-include('../../DBConnection.php'); //database connection
 session_start();
+include('../../DBConnection.php'); //database connection
 include('../layout/isadmin.php');
 
  $id = $_SESSION['tid'];

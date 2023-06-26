@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 define('PAGE', 'userprofile');
 define('TITLE', 'userprofile');
 include('../DBConnection.php');
