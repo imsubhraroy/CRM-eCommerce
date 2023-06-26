@@ -45,7 +45,7 @@
   <div class="row mt-4 mb-4">   <!--start row-->
     <div class="col-md-6 offset-md-3">  <!--start column-->
     <!--start form-->
-      <form action="" class="shadow-lg p-4" method="POST">
+      <form action="" class="shadow-lg p-4" method="POST" style="border: 1px solid black;border-radius: 20px;">
         <div class="form-group">
           <i class="fas fa-user"></i><label for="name" class="pl-2 font-weight-bold">Name</label><input type="text"
             class="form-control" placeholder="Name" name="rName" require>

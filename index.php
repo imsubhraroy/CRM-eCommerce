@@ -13,7 +13,7 @@
       <?php
       if (!isset($_SESSION['is_login'])) {
       ?>
-        <a href="login.php" class="btn btn-success mr-4">Login</a>
+        <a href="login.php" class="btn btn-success mr-4">Sign In</a>
         <a href="Registration.php" class="btn btn-danger mr-4">Sign Up</a>
       <?php } ?>
     </div>

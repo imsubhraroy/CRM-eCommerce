@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <title>MeCoM - Technician</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link rel="stylesheet" href="../CSS/custom.css">
@@ -26,7 +26,7 @@
   <div class="row">
    <nav class="col-sm-3 col-md-2 bg-success p-2 sidebar d-print-none" style="height: 60vh;">
     <div class="sidebar-sticky mt-3">
-      <a class="text-center text-info fs-4 ms-5" href="../index.php">OSMS</a>
+      <a class="text-center text-info fs-4 ms-5" href="../index.php"><span style="color:rebeccapurple;">MeCoM</span></a>
      <ul class="nav flex-column">
       <li class="nav-item">
        <a class="nav-link text-white <?php if(PAGE == 'work') { echo 'active'; } ?>" href="technicianworkorder.php">

@@ -30,7 +30,7 @@
 
 <!-- Top navbar -->
 <nav class="navbar navbar-dark fixed-top bg-info p-0 shadow">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="dashboard.php">OSMS</a>
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="dashboard.php"><span style="color:rebeccapurple;">MeCoM</span></a>
  </nav>
 
  <!--start Side Bar -->

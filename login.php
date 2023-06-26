@@ -53,7 +53,7 @@
         <div class="row mt-4 mb-4 loginformwidth">  <!--start row-->
             <div class="col-md-6 offset-md-3 col-sm-auto">    <!--start column-->            
             <!--start form-->
-                <form action="" class="shadow-lg p-4" method="POST">
+                <form action="" class="shadow-lg p-4" method="POST" style="border: 1px solid black;border-radius: 20px;">
                     <div class="form-group mb-4">
                         <i class="fas fa-user"></i><label for="email" class="pl-2 font-weight-bold">Email</label><input type="email" class="form-control" placeholder="Email" name="rEmail" require>
                         <!--Add text-white below if want text color white-->
