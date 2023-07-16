@@ -34,7 +34,7 @@ $file_name=$row['image'];
             <div class="col-md-6 offset-md-3 bg-success bg-opacity-25 py-3"> <!--start of column-->
             <!--start of form-->
             <div>
-                <img src="../products_Image/<?php if(isset( $row['image'])){echo $row['image']; } ?>" alt="" class="card-img-top mb-5 mt-3" style="height: 400px;">
+                <img src="../../products_Image/<?php if(isset( $row['image'])){echo $row['image']; } ?>" alt="" class="card-img-top mb-5 mt-3" style="height: 400px;">
             </div>    
             <form class="row g-3" method="POST" enctype="multipart/form-data">  <!-- start form-->
                     <div class="col-12">
@@ -98,7 +98,7 @@ $file_name=$row['image'];
 <?php
 //To close the page
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="asset.php";</script>';
+    echo '<script> location.href="../products.php";</script>';
 }
 
 //To update the signup table row
@@ -117,11 +117,11 @@ if(isset($_REQUEST['update'])){
     $result=mysqli_query($conn,$sql);
     if($result){
         echo '<script> window.alert("Data Updated Successfully")</script>';
-        echo '<script> location.href="asset.php";</script>';
+        echo '<script> location.href="../products.php";</script>';
     }
     else{
         echo '<script> window.alert("Unable to Update")</script>';
-        echo '<script> location.href="asset.php";</script>';
+        echo '<script> location.href="../products.php";</script>';
     }
 // }
 // else{
