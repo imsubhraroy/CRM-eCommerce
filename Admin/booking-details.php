@@ -8,7 +8,7 @@ include('../DBConnection.php');
 include('layout/adminheader.php');
 
 
-$sql = "SELECT * FROM delivary_details";
+$sql = "SELECT * FROM delivery_details";
 $result = mysqli_query($conn, $sql);
 if ($result) {
   if (mysqli_num_rows($result) > 0) {
@@ -103,11 +103,11 @@ if (isset($_REQUEST['done'])) {
 
   $d_date = date("Y-m-d");
 
-  $sql = "INSERT INTO delivary_done (did,pid,uid,name,price,email,add1,add2,city,state,zip,mobile,d_date,delivary_date) VALUES ($did,$pid,$uid,'$u_name','$p_price','$u_email','$u_add1','$u_add2','$u_city','$u_state','$u_zip','$u_mobile','$o_date','$d_date')";
+  $sql = "INSERT INTO delivery_done (did,pid,uid,name,price,email,add1,add2,city,state,zip,mobile,d_date,delivery_date) VALUES ($did,$pid,$uid,'$u_name','$p_price','$u_email','$u_add1','$u_add2','$u_city','$u_state','$u_zip','$u_mobile','$o_date','$d_date')";
 
   $result = mysqli_query($conn, $sql);
   if ($result) {
-    $sql = "DELETE FROM delivary_details where id=$did";
+    $sql = "DELETE FROM delivery_details where id=$did";
     $result1 = mysqli_query($conn, $sql);
 
     echo '<script>location.href="booking-details.php"</script>';

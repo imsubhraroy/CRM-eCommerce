@@ -10,19 +10,19 @@ include('layout/isadmin.php');
 
 
 //Fetching no. of service that done from servicedone table
-$sql1="SELECT COUNT(id) AS total FROM delivary_details";
+$sql1="SELECT COUNT(id) AS total FROM delivery_details";
 $result=mysqli_query($conn,$sql1);
 $row=mysqli_fetch_assoc($result);
 $delivery_pending=$row['total'];
 
 //Fetching total money from servicedone table
-$sql1="SELECT sum(price) AS price FROM delivary_done";
+$sql1="SELECT sum(price) AS price FROM delivery_done";
 $result=mysqli_query($conn,$sql1);
 $row=mysqli_fetch_assoc($result);
 $totalprofit=$row['price'];
 
 //Fetching no. of technician from technician_tb table
-$sql1="SELECT COUNT(id) AS delivered FROM delivary_done";
+$sql1="SELECT COUNT(id) AS delivered FROM delivery_done";
 $result=mysqli_query($conn,$sql1);
 $row=mysqli_fetch_assoc($result);
 $delivered=$row['delivered'];
@@ -69,7 +69,7 @@ $delivered=$row['delivered'];
   <div class="mx-5 mt-5 text-center"> <!--start div-->
   <p class=" bg-dark text-white p-2">List of Product Completed</p>
   <?php 
-    $sql = "SELECT * FROM delivary_done";
+    $sql = "SELECT * FROM delivery_done";
     $result = mysqli_query($conn, $sql);
     if ($result) {
       if (mysqli_num_rows($result) > 0) {
@@ -154,7 +154,7 @@ $delivered=$row['delivered'];
 if(isset($_REQUEST['delete'])){
   $id= $_REQUEST['id'];
 
-  $sql1="DELETE FROM delivary_done WHERE id=$id";
+  $sql1="DELETE FROM delivery_done WHERE id=$id";
   $result1=mysqli_query($conn,$sql1);
   if($result1){
     echo '<script> window.alert("Data delete successfuly");</script>';

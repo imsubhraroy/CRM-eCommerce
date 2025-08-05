@@ -13,7 +13,7 @@
     $result=mysqli_query($conn,$sql);
     if(mysqli_num_rows($result) == 1){
       echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-      <strong>Holy guacamole!</strong> Email already exits.
+      <strong></strong> Email already exits.
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
     }

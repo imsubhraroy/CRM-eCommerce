@@ -114,7 +114,7 @@ if (isset($_REQUEST['view'])) {
         if($result3){
             $sql4 = "DELETE FROM servicerequest WHERE id=$rid";
             $result4=mysqli_query($conn,$sql4);
-            echo '<script> window.alert("Data inserted succesfully");</script>';
+            echo '<script> window.alert("Data inserted successfully");</script>';
             echo '<script> location.href="user-request.php";</script>';
         }
         else{

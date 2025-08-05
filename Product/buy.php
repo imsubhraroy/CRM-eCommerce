@@ -94,7 +94,7 @@ if(isset($_REQUEST['pay'])){
         echo '<scripy> alert("products not avaliable");';
     }
 
-    $sql2="INSERT INTO delivary_details(uid,pid,p_name,p_price,u_name,u_email,u_add1,u_add2,u_city,u_state,u_zip,u_mobile,o_date,quantity) VALUES($uid,$pid,'$pname','$p_price','$u_name','$u_email','$u_add1','$u_add2','$u_city','$u_state','$u_zip','$u_mobile','$u_date',$u_quantity)";
+    $sql2="INSERT INTO delivery_details(uid,pid,p_name,p_price,u_name,u_email,u_add1,u_add2,u_city,u_state,u_zip,u_mobile,o_date,quantity) VALUES($uid,$pid,'$pname','$p_price','$u_name','$u_email','$u_add1','$u_add2','$u_city','$u_state','$u_zip','$u_mobile','$u_date',$u_quantity)";
     $result2=mysqli_query($conn,$sql2);
 
     $current_quantity = $total_quantity - $u_quantity;

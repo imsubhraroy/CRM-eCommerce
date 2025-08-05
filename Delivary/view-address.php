@@ -6,7 +6,7 @@ include('../Admin/layout/isadmin.php');
  $did = $_GET['id'];
 
 //Fetching data from technician table 
-$sql2 = "SELECT * FROM delivary_details WHERE id=$did";
+$sql2 = "SELECT * FROM delivery_details WHERE id=$did";
 
 $result2 = mysqli_query($conn, $sql2);
 

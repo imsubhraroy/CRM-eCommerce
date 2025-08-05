@@ -8,7 +8,7 @@ include('layout/profileheader.php');
 echo '<div class="col-sm-auto col-md-10 mt-3 ms-auto">';
 
 $uid = $_SESSION['is_login'];
-$sql = "SELECT * from delivary_details where uid=$uid";
+$sql = "SELECT * from delivery_details where uid=$uid";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -38,7 +38,7 @@ if (mysqli_num_rows($result) > 0) {
     }
 }
 
-$sql1 = "SELECT pid,delivary_date from delivary_done where uid=$uid";
+$sql1 = "SELECT pid,delivery_date from delivery_done where uid=$uid";
 $result1 = mysqli_query($conn, $sql1);
 
 if(mysqli_num_rows($result1) > 0){ 
@@ -46,7 +46,7 @@ if(mysqli_num_rows($result1) > 0){
 while ($rows = mysqli_fetch_assoc($result1)) {
 
     $pid1 = $rows['pid'];
-    $d_date = $rows['delivary_date'];
+    $d_date = $rows['delivery_date'];
     $sql3 = "SELECT * from product where id=$pid1";
     $result3 = mysqli_query($conn, $sql3);
     $row = mysqli_fetch_assoc($result3);
