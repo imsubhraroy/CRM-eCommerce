@@ -1,5 +1,5 @@
 <?php
-$base_path  = 'CRM-eCOMMERCE';
+$base_path  = 'mecom';
 ?>
 
 <!doctype html>
