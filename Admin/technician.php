@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$base_path = 'CRM-eCOMMERCE';
 define('PAGE', 'technician');  //definr page value which declare in adminheader.php
 define('TITLE', 'technician'); //define page title
 include('../DBConnection.php'); //database connection
@@ -10,7 +10,7 @@ include('layout/isadmin.php');
 
 echo '<div class="col-sm-9 col-md-10">'; //start column
 include('Add/add-technician.php');            //add technician modal
-echo '  <p class=" bg-dark text-white p-2 text-center">List of Technician</p>'; 
+echo '  <p class=" bg-dark text-white p-2 text-center">List of Technician</p>';
 
 
 //Fetching technician table data
@@ -37,12 +37,24 @@ if ($result) {
 ?>
       <tbody>
         <tr>
-          <th scope="row"> <?php if(isset($rows['id'])) { echo $rows['id']; } ?> </th>
-          <th> <?php if(isset($rows['name'])) { echo $rows['name']; } ?> </th>
-          <td><?php if(isset($rows['email'])) { echo $rows['email']; } ?></td>
-          <td><?php if(isset($rows['city'])) { echo $rows['city']; } ?></td>
-          <td><?php if(isset($rows['mobile'])) { echo $rows['mobile']; } ?></td>
-          <td><form method="POST" action=""> <input type="hidden" name="tid" value="<?php  echo $rows['id']; ?>"> <button class="btn btn-primary me-2" name="view"><i class="fa-solid fa-eye"></i></button><button class="btn btn-danger" name="delete"><i class="fa-solid fa-trash"></i></button> </form></td>
+          <th scope="row"> <?php if (isset($rows['id'])) {
+                              echo $rows['id'];
+                            } ?> </th>
+          <th> <?php if (isset($rows['name'])) {
+                  echo $rows['name'];
+                } ?> </th>
+          <td><?php if (isset($rows['email'])) {
+                echo $rows['email'];
+              } ?></td>
+          <td><?php if (isset($rows['city'])) {
+                echo $rows['city'];
+              } ?></td>
+          <td><?php if (isset($rows['mobile'])) {
+                echo $rows['mobile'];
+              } ?></td>
+          <td>
+            <form method="POST" action=""> <input type="hidden" name="tid" value="<?php echo $rows['id']; ?>"> <button class="btn btn-primary me-2" name="view"><i class="fa-solid fa-eye"></i></button><button class="btn btn-danger" name="delete"><i class="fa-solid fa-trash"></i></button> </form>
+          </td>
         </tr>
 
   <?php }
@@ -55,31 +67,30 @@ if ($result) {
   }
 } else {
   echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> Something went wrong. Try again.
+             Something went wrong. Try again.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>';
 }
 
 //For view table data
-if(isset($_REQUEST['view'])){
-  $tid=$_REQUEST['tid'];
-  $_SESSION['tid']=$tid;
-  echo '<script> location.href="view/view-technician.php";</script>';
+if (isset($_REQUEST['view'])) {
+  $tid = $_REQUEST['tid'];
+  $_SESSION['tid'] = $tid;
+  echo '<script> location.href="/' . $base_path . '/Admin/view/view-technician.php";</script>';
 }
 
 //For delete table data
-if(isset($_REQUEST['delete'])){
-  $tid=$_REQUEST['tid'];
+if (isset($_REQUEST['delete'])) {
+  $tid = $_REQUEST['tid'];
 
-  $sql1="DELETE FROM technician_tb WHERE id=$tid";
-  $result1=mysqli_query($conn,$sql1);
-  if($result1){
+  $sql1 = "DELETE FROM technician_tb WHERE id=$tid";
+  $result1 = mysqli_query($conn, $sql1);
+  if ($result1) {
     echo '<script> window.alert("Data delete successfuly");</script>';
-    echo '<script> location.href="technician.php";</script>';
-  }
-  else{
+    echo '<script> location.href="/' . $base_path . '/Admin/technician.php";</script>';
+  } else {
     echo '<script> window.alert("Unable to delete data");</script>';
-    echo '<script> location.href="technician.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/Admin/technician.php";</script>';
   }
 }
 
@@ -87,4 +98,4 @@ if(isset($_REQUEST['delete'])){
   </div> <!--end primary row-->
   </div> <!--end main container-->
 
-  <?php include('../layout/footer.php'); ?>  <!--footer-->
+  <?php include('../layout/footer.php'); ?> <!--footer-->

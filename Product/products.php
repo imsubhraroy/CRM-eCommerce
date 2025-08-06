@@ -1,9 +1,9 @@
 <?php
 
-// session_start();
+session_start();
 
 include('../DBConnection.php');
-include('layout/header.php');
+include('../layout/header.php');
 
 echo '<div class="container text-center">
         <div class="row">';
@@ -21,7 +21,7 @@ if ($result) {
  
 } else {
     echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> Something went wrong!.
+             Something went wrong!.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>';
 }

@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$base_path = 'CRM-eCOMMERCE';
 include('../DBConnection.php');
 include('istechnician.php');
 
@@ -11,7 +11,7 @@ $sql2 = "SELECT * FROM serviceassign WHERE rid=$id";
 $result2 = mysqli_query($conn, $sql2);
 
 $row = mysqli_fetch_assoc($result2);
-$uid=$row['uid'];
+$uid = $row['uid'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,18 +19,18 @@ $uid=$row['uid'];
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>workdone</title>
+    <title>Work Done</title>
 
     <!-- Bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="container pt-5" id="registration">  <!-- start container-->
+    <div class="container pt-5" id="registration"> <!-- start container-->
         <h2 class="text-center">Assign Request</h2>
-        <div class="row mt-4 mb-4 loginformwidth">  <!-- start row-->
-            <div class="col-md-6 offset-md-3 bg-success bg-opacity-25 py-3">  <!-- start column-->
-                <form class="row g-3" method="POST" enctype="multipart/form-data">  <!-- start form-->
+        <div class="row mt-4 mb-4 loginformwidth"> <!-- start row-->
+            <div class="col-md-6 offset-md-3 bg-success bg-opacity-25 py-3"> <!-- start column-->
+                <form class="row g-3" method="POST" enctype="multipart/form-data"> <!-- start form-->
                     <div class="col-12">
                         <label for="inputAddress2" class="form-label">Request ID</label>
                         <input type="text" class="form-control px-3" name="rid" placeholder="Request Id" value="<?php if (isset($row['rid'])) {
@@ -123,9 +123,9 @@ $uid=$row['uid'];
                         <button type="submit" class="btn btn-primary" name="done">Done</button>
                         <button type="submit" class="btn btn-danger" name="close">close</button>
                     </div>
-                </form>   <!-- end form-->
-            </div>  <!-- end column-->
-        </div>  <!-- end row-->
+                </form> <!-- end form-->
+            </div> <!-- end column-->
+        </div> <!-- end row-->
     </div> <!-- end container-->
 
     <!-- Bootstrap Js -->
@@ -164,10 +164,10 @@ if (isset($_REQUEST['done'])) {
             $sql = "DELETE FROM serviceassign where rid=$rid";   //To delete row from serviceassign table
             $result = mysqli_query($conn, $sql);
             echo '<script> window.alert("Data Update Succesfully")</script>';
-            echo '<script> location.href="technicianworkorder.php";</script>';
+            echo '<script> location.href="/' . $base_path . '/Technician/technicianworkorder.php";</script>';
         } else {
             echo '<script> window.alert("Unable to update data")</script>';
-            echo '<script> location.href="technicianworkorder.php";</script>';
+            echo '<script> location.href="/' . $base_path . '/Technician/technicianworkorder.php";</script>';
         }
     } else {
         echo '<script> window.alert("Unable to upload file")</script>';
@@ -177,7 +177,7 @@ if (isset($_REQUEST['done'])) {
 
 //To close the page
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="technicianworkorder.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/Technician/technicianworkorder.php";</script>';
 }
 
 ?>

@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$base_path = 'CRM-eCOMMERCE';
 define('PAGE', 'userprofile');
 define('TITLE', 'userprofile');
 include('../DBConnection.php');
@@ -27,18 +28,18 @@ if (isset($_REQUEST['nameupdate'])) {
     $result = mysqli_query($conn, $sql);
     if ($result) {
         $passmsg = '<div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> Name updated successfully.
+         Name updated successfully.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>';
 
-        echo '<script> location.href="userprofile.php"</script>';
+        echo '<script> location.href="/' . $base_path . '/user/user-profile.php"</script>';
     } else {
         $passmsg = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> Something went wrong. Try again.
+         Something went wrong. Try again.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>';
 
-        echo '<script> location.href="userprofile.php"</script>';
+        echo '<script> location.href="/' . $base_path . '/user/user-profile.php"</script>';
     }
 }
 

@@ -1,3 +1,7 @@
+<?php
+$base_path  = 'CRM-eCOMMERCE';
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -14,7 +18,7 @@
 
   <!-- custom css -->
   <!-- <link rel="stylesheet" href="../../CSS/"> -->
-  <link rel="stylesheet" href="./CSS/custom.css">
+  <link rel="stylesheet" href="/<?= $base_path ?>/CSS/custom.css">
 
   <!-- <style>
     ion-icon {
@@ -24,43 +28,44 @@
   </style> -->
 </head>
 
+
 <body>
   <nav class="navbar navbar-expand-lg bg-info bg-opacity-70">
     <!-- start nav -->
     <div class="container-fluid">
       <!-- star container -->
-      <a class="navbar-brand fs-2" href="#"><img class="logo rounded" src="./IMAGES/logo.jpg" alt="LOGO"><span style="color:rebeccapurple;">MeCoM</span></a> <!-- LOGO -->
+      <a class="navbar-brand fs-2" href="#"><img class="logo rounded" src="/<?= $base_path ?>/IMAGES/logo.jpg" alt="LOGO"><span style="color:rebeccapurple;">MeCoM</span></a> <!-- LOGO -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5 text-right">
           <li class="nav-item px-2">
-            <a class="nav-link " aria-current="page" href="index.php">Home</a>
+            <a class="nav-link " aria-current="page" href="/<?= $base_path ?>/index.php">Home</a>
           </li>
           <li class="nav-item px-2">
-            <a class="nav-link" href="user/service-request.php">Request</a>
+            <a class="nav-link" href="/<?= $base_path ?>/user/service-request.php">Request</a>
           </li>
           <li class="nav-item px-2">
-            <a class="nav-link" href="product/products.php">Product</a>
+            <a class="nav-link" href="/<?= $base_path ?>/product/products.php">Product</a>
           </li>
           <?php  //To check if the user is login or not
           // session_start();
           if (!isset($_SESSION['is_login'])) {
           ?>
             <li class="nav-item px-2">
-              <a class="nav-link" aria-current="page" href="Registration.php">Registar</a>
+              <a class="nav-link" aria-current="page" href="/<?= $base_path ?>/Registration.php">Registar</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link" href="login.php">Login</a>
+              <a class="nav-link" href="/<?= $base_path ?>/login.php">Login</a>
             </li>
           <?php } else { ?>
             <li class="nav-item">
-              <a class="nav-link" href="user/user-profile.php">Profile</a>
+              <a class="nav-link" href="/<?= $base_path ?>/user/user-profile.php">Profile</a>
             </li>
           <?php } ?>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="Contact-us.php">Contact Us</a>
+            <a class="nav-link " aria-current="page" href="/<?= $base_path ?>/Contact-us.php">Contact Us</a>
           </li>
         </ul>
       </div>

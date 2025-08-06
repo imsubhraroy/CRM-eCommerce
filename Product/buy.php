@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$base_path = 'CRM-eCOMMERCE';
 include('../DBConnection.php');
 include('layout/header.php');
 include('../user/layout/islogin.php');
@@ -67,47 +67,46 @@ echo '<div class="container ">
 echo '</div>
     </div>';
 
-if(isset($_REQUEST['pay'])){
+if (isset($_REQUEST['pay'])) {
     //Fetching data from product table
-    $pid=$_SESSION['product_details'];
-    $sql="SELECT id,name,selling_price FROM product where id=$pid";
-    $result=mysqli_query($conn,$sql);
-    $row=mysqli_fetch_assoc($result);
-    $pname=$row['name'];
+    $pid = $_SESSION['product_details'];
+    $sql = "SELECT id,name,selling_price FROM product where id=$pid";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $pname = $row['name'];
     $total_quantity = $row['quantity'];
-    $p_price=$row['selling_price'];
+    $p_price = $row['selling_price'];
 
     //Fetching data from form
-    $uid=$_SESSION['is_login'];
-    $u_name=$_REQUEST['uname'];
-    $u_add1=$_REQUEST['uadd1'];
-    $u_add2=$_REQUEST['uadd2'];
-    $u_city=$_REQUEST['ucity'];
-    $u_state=$_REQUEST['ustate'];
-    $u_zip=$_REQUEST['uzip'];
-    $u_email=$_REQUEST['uemail'];
-    $u_mobile=$_REQUEST['umobile'];
+    $uid = $_SESSION['is_login'];
+    $u_name = $_REQUEST['uname'];
+    $u_add1 = $_REQUEST['uadd1'];
+    $u_add2 = $_REQUEST['uadd2'];
+    $u_city = $_REQUEST['ucity'];
+    $u_state = $_REQUEST['ustate'];
+    $u_zip = $_REQUEST['uzip'];
+    $u_email = $_REQUEST['uemail'];
+    $u_mobile = $_REQUEST['umobile'];
     $u_quantity = $_REQUEST['quantity'];
-    $u_date=date("Y-m-d");
+    $u_date = date("Y-m-d");
 
-    if($u_quantity >= $total_quantity ){
+    if ($u_quantity >= $total_quantity) {
         echo '<scripy> alert("products not avaliable");';
     }
 
-    $sql2="INSERT INTO delivery_details(uid,pid,p_name,p_price,u_name,u_email,u_add1,u_add2,u_city,u_state,u_zip,u_mobile,o_date,quantity) VALUES($uid,$pid,'$pname','$p_price','$u_name','$u_email','$u_add1','$u_add2','$u_city','$u_state','$u_zip','$u_mobile','$u_date',$u_quantity)";
-    $result2=mysqli_query($conn,$sql2);
+    $sql2 = "INSERT INTO delivery_details(uid,pid,p_name,p_price,u_name,u_email,u_add1,u_add2,u_city,u_state,u_zip,u_mobile,o_date,quantity) VALUES($uid,$pid,'$pname','$p_price','$u_name','$u_email','$u_add1','$u_add2','$u_city','$u_state','$u_zip','$u_mobile','$u_date',$u_quantity)";
+    $result2 = mysqli_query($conn, $sql2);
 
     $current_quantity = $total_quantity - $u_quantity;
 
-    $sql1= "UPDATE FROM product SET quantity= $current_quantity WHERE id=$pid";
+    $sql1 = "UPDATE FROM product SET quantity= $current_quantity WHERE id=$pid";
 
 
-    echo '<script> location.href="products.php";</script>';
-
+    echo '<script> location.href="/' . $base_path . '/Product/products.php";</script>';
 }
 
-if(isset($_REQUEST['profile'])){
-    echo '<script> location.href="products.php";</script>';
+if (isset($_REQUEST['profile'])) {
+    echo '<script> location.href="/' . $base_path . '/Product/products.php";</script>';
 }
 
 ?>

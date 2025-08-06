@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$base_path = 'CRM-eCOMMERCE';
 define('PAGE', 'bookingdetails');
 define('TITLE', 'Booking-Details');
 include('../DBConnection.php');
@@ -58,12 +58,12 @@ if ($result) {
           <td><?php if (isset($rows['uid'])) {
                 echo $rows['uid'];
               } ?></td>
-          <td> <a class="btn btn-primary me-2" href="../Delivary/viewproduct.php?id=<?php echo $rows['pid'] ?>"><i class="fa-solid fa-eye"></i></a>
+          <td> <a class="btn btn-primary me-2" href="/<?= $base_path ?>/Delivary/viewproduct.php?id=<?php echo $rows['pid'] ?>"><i class="fa-solid fa-eye"></i></a>
           </td>
           <td><?php if (isset($rows['u_email'])) {
                 echo $rows['u_email'];
               } ?></td>
-          <td><a class="btn btn-primary me-2" href="../Delivary/view-address.php?id=<?php echo $rows['id'] ?>"><i class="fa-solid fa-eye"></i></a></td>
+          <td><a class="btn btn-primary me-2" href="/<?= $base_path ?>/Delivary/view-address.php?id=<?php echo $rows['id'] ?>"><i class="fa-solid fa-eye"></i></a></td>
           <td><?php if (isset($rows['u_mobile'])) {
                 echo $rows['u_mobile'];
               } ?></td>
@@ -92,7 +92,7 @@ if ($result) {
   }
 } else {
   echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> Something went wrong. Try again.
+             Something went wrong. Try again.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>';
 }
@@ -110,7 +110,7 @@ if (isset($_REQUEST['done'])) {
     $sql = "DELETE FROM delivery_details where id=$did";
     $result1 = mysqli_query($conn, $sql);
 
-    echo '<script>location.href="booking-details.php"</script>';
+    echo '<script>location.href="/' . $base_path . '/booking-details.php"</script>';
   }
 }
 

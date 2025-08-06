@@ -1,4 +1,4 @@
-
+<?php $base_path = 'CRM-eCOMMERCE' ?>
 <footer class="text-center text-lg-start  bg-dark text-muted mt-5 ">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center text-white justify-content-lg-between p-4 border-bottom">
@@ -29,7 +29,7 @@
         <i class="fab fa-github"></i>
       </a>
     </div>
-    
+
     <!-- Right -->
   </section>
   <!-- Section: Social media -->
@@ -43,12 +43,8 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
+            <i class="fas fa-gem me-3"></i>MeCom
           </h6>
-          <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
-          </p>
         </div>
         <!-- Grid column -->
 
@@ -59,16 +55,7 @@
             Products
           </h6>
           <p>
-            <a href="#!" class="text-reset text-decoration-none">Angular</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset text-decoration-none">React</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset text-decoration-none">Vue</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset text-decoration-none">Laravel</a>
+            <a href="/<?= $base_path ?>/user/service-request.php" class="text-reset text-decoration-none">Request</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -80,16 +67,7 @@
             Useful links
           </h6>
           <p>
-            <a href="Technician/technicianlogin.php" class="text-reset text-decoration-none">Technician Login</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset text-decoration-none">Settings</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset text-decoration-none">Orders</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset text-decoration-none">Help</a>
+            <a href="/<?= $base_path ?>/Technician/technicianlogin.php" class="text-reset text-decoration-none">Technician Login</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -115,21 +93,22 @@
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2023 Copyright:
-    <a class="text-reset fw-bold" href="https://subhra.digitalmelodic.in/">subhraroy.in</a>
+    © 2025 Copyright:
+    <a class="text-reset fw-bold" target="_blank" href="https://subhraroy.com/">subhraroy.com</a>
   </div>
   <!-- Copyright -->
-  
+
 </footer>
 
 <!-- Bootstrap js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
 <!-- custom js -->
-  <script src="../JS/custom.js"></script>
+<script src="../JS/custom.js"></script>
 
-  <!-- Ion icons JS -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- Ion icons JS -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

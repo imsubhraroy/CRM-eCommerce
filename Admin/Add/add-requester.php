@@ -1,5 +1,5 @@
 <?php
-
+$base_path = 'CRM-eCOMMERCE';
 include('../DBConnection.php'); //database connection
 include('layout/isadmin.php');
 
@@ -16,7 +16,7 @@ if (isset($_REQUEST['addr'])) {
         echo '<script> location.href="requester.php"</script>';
     } else {
         echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> Enter Email or Password correctly.
+             Enter Email or Password correctly.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>';
     }
@@ -38,7 +38,7 @@ if (isset($_REQUEST['addr'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <!-- custom css -->
-    <link rel="stylesheet" href="../CSS/custom.css">
+    <link rel="stylesheet" href="/<?= $base_path ?>/CSS/custom.css">
 
 </head>
 

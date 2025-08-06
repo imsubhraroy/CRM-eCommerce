@@ -1,5 +1,6 @@
 <?php
 session_start();
+$base_path = 'CRM-eCOMMERCE';
 define('PAGE', 'checkstatus');
 define('TITLE', 'checkstatus');
 include('../DBConnection.php');
@@ -24,7 +25,7 @@ if (isset($_SESSION['is_login'])) { ?>
             <?php }
     } else {
         echo '<script> window.alert("You are not login")</script>';
-        echo '<script> location.href="index.php"</script>';
+        echo '<script> location.href="/' . $base_path . '/index.php"</script>';
     }
 
     //Fetching row from serviceassign table
@@ -158,7 +159,7 @@ if (isset($_SESSION['is_login'])) { ?>
             }
         } else {
             echo '<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
-        <strong>Holy guacamole!</strong> Unable to submit request, Try again after some times.
+         Unable to submit request, Try again after some times.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
         }
@@ -172,10 +173,10 @@ if (isset($_SESSION['is_login'])) { ?>
         $result = mysqli_query($conn, $sql2);
 
         if ($result) {
-            echo '<script> location.href="checkstatus.php"</script>';
+            echo '<script> location.href="/' . $base_path . '/user/check-status.php"</script>';
         } else {
             $msg = '<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
-            <strong>Holy guacamole!</strong> Unable to submit request, Try again after some times.
+             Unable to submit request, Try again after some times.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>';
         }

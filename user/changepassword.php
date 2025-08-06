@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$base_path = 'CRM-eCOMMERCE';
 define('PAGE', 'changepassword');
 define('TITLE', 'changepassword');
 include('../DBConnection.php');
@@ -22,18 +22,18 @@ if (isset($_REQUEST['passupdate'])) {
         $result = mysqli_query($conn, $sql);
         if ($result) {
             $passmsg = '<div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> password updated successfully.
+         password updated successfully.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>';
 
-            echo '<script> location.href="userprofile.php"</script>';
+            echo '<script> location.href="/' . $base_path . '/user/userprofile.php"</script>';
         } else {
             $passmsg = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> Something went wrong. Try again.
+         Something went wrong. Try again.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>';
 
-            echo '<script> location.href="user/userprofile.php"</script>';
+            echo '<script> location.href="/' . $base_path . '/user/userprofile.php"</script>';
         }
     }
     $passmsg = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -59,9 +59,9 @@ if (isset($_REQUEST['passupdate'])) {
         <?php if (isset($passmsg)) {
             echo $passmsg;
         } ?>
-    </form>  <!--end form-->
-</div>  <!--end column-->
-</div>  <!--end primary row-->
-</div>  <!--end main container-->
+    </form> <!--end form-->
+</div> <!--end column-->
+</div> <!--end primary row-->
+</div> <!--end main container-->
 
 <?php include('../layout/footer.php')  ?> <!--footer-->

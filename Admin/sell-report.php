@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$base_path = 'CRM-eCOMMERCE';
 define('PAGE', 'sellreport');
 define('TITLE', 'sellreport');
 include('../DBConnection.php');
@@ -10,28 +10,28 @@ include('layout/isadmin.php');
 
 
 //Fetching no. of service that done from servicedone table
-$sql1="SELECT COUNT(id) AS total FROM delivery_details";
-$result=mysqli_query($conn,$sql1);
-$row=mysqli_fetch_assoc($result);
-$delivery_pending=$row['total'];
+$sql1 = "SELECT COUNT(id) AS total FROM delivery_details";
+$result = mysqli_query($conn, $sql1);
+$row = mysqli_fetch_assoc($result);
+$delivery_pending = $row['total'];
 
 //Fetching total money from servicedone table
-$sql1="SELECT sum(price) AS price FROM delivery_done";
-$result=mysqli_query($conn,$sql1);
-$row=mysqli_fetch_assoc($result);
-$totalprofit=$row['price'];
+$sql1 = "SELECT sum(price) AS price FROM delivery_done";
+$result = mysqli_query($conn, $sql1);
+$row = mysqli_fetch_assoc($result);
+$totalprofit = $row['price'];
 
 //Fetching no. of technician from technician_tb table
-$sql1="SELECT COUNT(id) AS delivered FROM delivery_done";
-$result=mysqli_query($conn,$sql1);
-$row=mysqli_fetch_assoc($result);
-$delivered=$row['delivered'];
+$sql1 = "SELECT COUNT(id) AS delivered FROM delivery_done";
+$result = mysqli_query($conn, $sql1);
+$row = mysqli_fetch_assoc($result);
+$delivered = $row['delivered'];
 
 ?>
 
 
-<div class="col-sm-9 col-md-10">  <!--start column-->
-  <div class="row mx-5 text-center">  <!--start row-->
+<div class="col-sm-9 col-md-10"> <!--start column-->
+  <div class="row mx-5 text-center"> <!--start row-->
     <div class="col-sm-4 mt-5">
       <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
         <div class="card-header">Yet To Delivery</div>
@@ -39,7 +39,7 @@ $delivered=$row['delivered'];
           <h4 class="card-title">
             <?php echo $delivery_pending; ?>
           </h4>
-          <a class="btn text-white" href="booking-details.php">View</a>
+          <a class="btn text-white" href="/<?= $base_path ?>/Admin/booking-details.php">View</a>
         </div>
       </div>
     </div>
@@ -50,7 +50,7 @@ $delivered=$row['delivered'];
           <h4 class="card-title">
             <?php echo $totalprofit; ?>
           </h4>
-          <a class="btn text-white" href="workorder.php">View</a>
+          <a class="btn text-white" href="/<?= $base_path ?>/Admin/workorder.php">View</a>
         </div>
       </div>
     </div>
@@ -61,19 +61,19 @@ $delivered=$row['delivered'];
           <h4 class="card-title">
             <?php echo $delivered; ?>
           </h4>
-          <a class="btn text-white" href="technician.php">View</a>
+          <a class="btn text-white" href="/<?= $base_path ?>/Admin/technician.php">View</a>
         </div>
       </div>
     </div>
   </div> <!--end roww-->
   <div class="mx-5 mt-5 text-center"> <!--start div-->
-  <p class=" bg-dark text-white p-2">List of Product Completed</p>
-  <?php 
+    <p class=" bg-dark text-white p-2">List of Product Completed</p>
+    <?php
     $sql = "SELECT * FROM delivery_done";
     $result = mysqli_query($conn, $sql);
     if ($result) {
       if (mysqli_num_rows($result) > 0) {
-    
+
         echo '
           <table class="table table table-success table-striped">  <!-- start table-->
             <thead>
@@ -90,7 +90,7 @@ $delivered=$row['delivered'];
                 <th scope="col">Action</th>
               </tr>
             </thead>';
-    
+
         while ($rows = mysqli_fetch_assoc($result)) {
 
     ?>
@@ -105,12 +105,12 @@ $delivered=$row['delivered'];
               <td><?php if (isset($rows['uid'])) {
                     echo $rows['uid'];
                   } ?></td>
-              <td> <a class="btn btn-primary me-2" href="../Delivary/viewproduct.php?id=<?php echo $rows['pid'] ?>"><i class="fa-solid fa-eye"></i></a>
+              <td> <a class="btn btn-primary me-2" href="/<?= $base_path ?>/Delivary/viewproduct.php?id=<?php echo $rows['pid'] ?>"><i class="fa-solid fa-eye"></i></a>
               </td>
               <td><?php if (isset($rows['email'])) {
                     echo $rows['email'];
                   } ?></td>
-              <td><a class="btn btn-primary me-2" href="../Delivary/view-address.php?id=<?php echo $rows['id'] ?>"><i class="fa-solid fa-eye"></i></a></td>
+              <td><a class="btn btn-primary me-2" href="/<?= $base_path ?>/Delivary/view-address.php?id=<?php echo $rows['id'] ?>"><i class="fa-solid fa-eye"></i></a></td>
               <td><?php if (isset($rows['mobile'])) {
                     echo $rows['mobile'];
                   } ?></td>
@@ -124,11 +124,11 @@ $delivered=$row['delivered'];
                 <form method="POST" action="">
                   <input type="hidden" name="id" value="<?php echo $rows['id']; ?>">
                   <button class="btn btn-danger" name="delete">
-                  <i class="fa-solid fa-trash"></i></button>
+                    <i class="fa-solid fa-trash"></i></button>
                 </form>
               </td>
             </tr>
-    
+
       <?php }
         echo ' </tbody>
         </table>
@@ -138,28 +138,28 @@ $delivered=$row['delivered'];
       }
     } else {
       echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Holy guacamole!</strong> Something went wrong. Try again.
+                 Something went wrong. Try again.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>';
     }
 
-  ?>
+      ?>
   </div> <!--end div-->
-</div>   <!--end column-->
-</div>   <!--end primary row-->
-</div>   <!--end main container-->
+</div> <!--end column-->
+</div> <!--end primary row-->
+</div> <!--end main container-->
 
-<?php 
+<?php
 
-if(isset($_REQUEST['delete'])){
-  $id= $_REQUEST['id'];
+if (isset($_REQUEST['delete'])) {
+  $id = $_REQUEST['id'];
 
-  $sql1="DELETE FROM delivery_done WHERE id=$id";
-  $result1=mysqli_query($conn,$sql1);
-  if($result1){
+  $sql1 = "DELETE FROM delivery_done WHERE id=$id";
+  $result1 = mysqli_query($conn, $sql1);
+  if ($result1) {
     echo '<script> window.alert("Data delete successfuly");</script>';
-    echo '<script> location.href="sell-report.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/Admin/sell-report.php";</script>';
   }
 }
 
-include('../layout/footer.php'); ?>   <!--footer-->
+include('../layout/footer.php'); ?> <!--footer-->

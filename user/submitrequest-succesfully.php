@@ -1,5 +1,6 @@
 <?php
 session_start();
+$base_path = 'CRM-eCOMMERCE';
 define('PAGE', 'Service');
 define('TITLE', 'success');
 include('../DBConnection.php');
@@ -56,7 +57,7 @@ if ($_SESSION['is_login']) {
         }
     } else {
         $msg = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Holy guacamole!</strong> Unable to submit request, Try again after some times.
+         Unable to submit request, Try again after some times.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
     }
@@ -64,7 +65,7 @@ if ($_SESSION['is_login']) {
 
 if(isset($_REQUEST['close']))
 {
-   echo '<script> location.href="../index.php"</script>';
+   echo '<script> location.href="/' . $base_path . '/index.php"</script>';
 
 }
 include('../layout/footer.php')  //footer

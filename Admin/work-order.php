@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$base_path = 'CRM-eCOMMERCE';
 define('PAGE', 'work');
 define('TITLE', 'workorder');
 include('../DBConnection.php');
@@ -36,15 +36,33 @@ if ($result) {
 ?>
       <tbody>
         <tr>
-          <th scope="row"> <?php if(isset($rows['rid'])) { echo $rows['rid']; } ?> </th>
-          <td><?php if(isset($rows['request_info'])) { echo $rows['request_info']; } ?></td>
-          <td><?php if(isset($rows['request_desc'])) { echo $rows['request_desc']; } ?></td>
-          <td><?php if(isset($rows['email'])) { echo $rows['email']; } ?></td>
-          <td><?php if(isset($rows['state'])) { echo $rows['state']; } ?></td>
-          <td><?php if(isset($rows['mobile'])) { echo $rows['mobile']; } ?></td>
-          <td><?php if(isset($rows['technician'])) { echo $rows['technician']; } ?></td>
-          <td><?php if(isset($rows['assign_date'])) { echo $rows['assign_date']; } ?></td>
-          <td><form method="POST" action=""> <input type="hidden" name="rid" value="<?php  echo $rows['rid']; ?>"> <button class="btn btn-primary me-2" name="view"><i class="fa-solid fa-eye"></i></button><button class="btn btn-danger" name="delete"><i class="fa-solid fa-trash"></i></button> </form></td>
+          <th scope="row"> <?php if (isset($rows['rid'])) {
+                              echo $rows['rid'];
+                            } ?> </th>
+          <td><?php if (isset($rows['request_info'])) {
+                echo $rows['request_info'];
+              } ?></td>
+          <td><?php if (isset($rows['request_desc'])) {
+                echo $rows['request_desc'];
+              } ?></td>
+          <td><?php if (isset($rows['email'])) {
+                echo $rows['email'];
+              } ?></td>
+          <td><?php if (isset($rows['state'])) {
+                echo $rows['state'];
+              } ?></td>
+          <td><?php if (isset($rows['mobile'])) {
+                echo $rows['mobile'];
+              } ?></td>
+          <td><?php if (isset($rows['technician'])) {
+                echo $rows['technician'];
+              } ?></td>
+          <td><?php if (isset($rows['assign_date'])) {
+                echo $rows['assign_date'];
+              } ?></td>
+          <td>
+            <form method="POST" action=""> <input type="hidden" name="rid" value="<?php echo $rows['rid']; ?>"> <button class="btn btn-primary me-2" name="view"><i class="fa-solid fa-eye"></i></button><button class="btn btn-danger" name="delete"><i class="fa-solid fa-trash"></i></button> </form>
+          </td>
         </tr>
 
   <?php }
@@ -58,30 +76,30 @@ if ($result) {
   }
 } else {
   echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> Something went wrong. Try again.
+             Something went wrong. Try again.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>';
 }
 
 
 //To view serviceassign table row
-if(isset($_REQUEST['view'])){
-  $viewid=$_REQUEST['rid'];
-  $_SESSION['viewid']=$viewid;
+if (isset($_REQUEST['view'])) {
+  $viewid = $_REQUEST['rid'];
+  $_SESSION['viewid'] = $viewid;
 
-  echo '<script> location.href="view/view-assignwork.php";</script>';
+  echo '<script> location.href="/' . $base_path . '/Admin/view/view-assignwork.php";</script>';
 }
 
 
 //To delete serviceassign table row
-if(isset($_REQUEST['delete'])){
-  $rid=$_REQUEST['rid'];
+if (isset($_REQUEST['delete'])) {
+  $rid = $_REQUEST['rid'];
 
-  $sql1="DELETE FROM serviceassign WHERE rid=$rid";
-  $result1=mysqli_query($conn,$sql1);
-  if($result1){
+  $sql1 = "DELETE FROM serviceassign WHERE rid=$rid";
+  $result1 = mysqli_query($conn, $sql1);
+  if ($result1) {
     echo '<script> window.alert("Data delete successfuly");</script>';
-    echo '<script> location.href="work-order.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/Admin/work-order.php";</script>';
   }
 }
 

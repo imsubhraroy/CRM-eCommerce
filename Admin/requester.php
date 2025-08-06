@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$base_path = 'CRM-eCOMMERCE';
 define('PAGE', 'requesters');  //definr page value which declare in adminheader.php
 define('TITLE', 'requesters');  //define page title
 include('../DBConnection.php'); //database connection
@@ -51,7 +51,7 @@ if ($result) {
   }
 } else {
   echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> Something went wrong. Try again.
+             Something went wrong. Try again.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>';
 }
@@ -60,7 +60,7 @@ if ($result) {
 if(isset($_REQUEST['view'])){
   $uid=$_REQUEST['uid'];
   $_SESSION['uid']=$uid;
-  echo '<script> location.href="view/view-requester.php";</script>';
+  echo '<script> location.href="/' . $base_path . '/Admin/view/view-requester.php";</script>';
 }
 
 //For delete table data
@@ -71,7 +71,7 @@ if(isset($_REQUEST['delete'])){
   $result1=mysqli_query($conn,$sql1);
   if($result1){
     echo '<script> window.alert("Data delete successfuly");</script>';
-    echo '<script> location.href="requester.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/Admin/requester.php";</script>';
   }
 }
 

@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$base_path = 'CRM-eCOMMERCE';
 define('PAGE', 'work');
 define('TITLE', 'workorder');
 include('../DBConnection.php');
@@ -86,7 +86,7 @@ if (!isset($_REQUEST['view'])) {
     }
   } else {
     echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> Something went wrong. Try again.
+             Something went wrong. Try again.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>';
   }
@@ -103,7 +103,7 @@ if (isset($_REQUEST['view'])) {
 if (isset($_REQUEST['done'])) {
   $tviewid = $_REQUEST['rid'];
   $_SESSION['tviewid'] = $tviewid;
-  echo '<script> location.href="workdone.php";</script>';
+  echo '<script> location.href="/' . $base_path . '/Technician/workdone.php";</script>';
 }
 
   ?>

@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+$base_path = 'CRM-eCOMMERCE';
 include('../../DBConnection.php');
 ?>
 
@@ -18,30 +18,30 @@ include('../../DBConnection.php');
 </head>
 
 <body>
-    <div class="container pt-5" id="registration">  <!-- start container-->
+    <div class="container pt-5" id="registration"> <!-- start container-->
         <h2 class="text-center">Assign Request</h2>
-        <div class="row mt-4 mb-4 loginformwidth">  <!-- start row-->
-            <div class="col-md-6 offset-md-3 bg-success bg-opacity-25 py-3">  <!-- start column-->
-                <form class="row g-3" method="POST" enctype="multipart/form-data">  <!-- start form-->
+        <div class="row mt-4 mb-4 loginformwidth"> <!-- start row-->
+            <div class="col-md-6 offset-md-3 bg-success bg-opacity-25 py-3"> <!-- start column-->
+                <form class="row g-3" method="POST" enctype="multipart/form-data"> <!-- start form-->
                     <div class="col-12">
                         <label for="inputAddress2" class="form-label">Name</label>
                         <input type="text" class="form-control" name="name" placeholder="Name">
                     </div>
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">Quantity</label>
-                        <input type="number" class="form-control" name="quantity" >
+                        <input type="number" class="form-control" name="quantity">
                     </div>
                     <div class="col-md-4">
                         <label for="inputState" class="form-label">Price</label>
-                        <input type="text" class="form-control" name="price" >
+                        <input type="text" class="form-control" name="price">
                     </div>
                     <div class="col-md-2">
                         <label for="inputZip" class="form-label">Selling Price</label>
-                        <input type="text" class="form-control" name="sprice" >
+                        <input type="text" class="form-control" name="sprice">
                     </div>
                     <div class="col-md-6">
                         <label for="inputPassword4" class="form-label">Assign Date</label>
-                        <input type="date" class="form-control" name="assign_date" >
+                        <input type="date" class="form-control" name="assign_date">
                     </div>
                     <div class="col-md-6">
                         <label for="inputPassword4" class="form-label">Upload File</label>
@@ -52,9 +52,9 @@ include('../../DBConnection.php');
                         <button type="submit" class="btn btn-primary" name="done">Done</button>
                         <button type="submit" class="btn btn-danger" name="close">close</button>
                     </div>
-                </form>   <!-- end form-->
-            </div>  <!-- end column-->
-        </div>  <!-- end row-->
+                </form> <!-- end form-->
+            </div> <!-- end column-->
+        </div> <!-- end row-->
     </div> <!-- end container-->
 
     <!-- Bootstrap Js -->
@@ -84,10 +84,10 @@ if (isset($_REQUEST['done'])) {
             // $sql = "DELETE FROM serviceassign where rid=$rid";   //To delete row from serviceassign table
             // $result = mysqli_query($conn, $sql);
             echo '<script> window.alert("Data Update Succesfully")</script>';
-            echo '<script> location.href="../products.php";</script>';
+            echo '<script> location.href="/' . $base_path . '/Admin/products.php";</script>';
         } else {
             echo '<script> window.alert("Unable to update data")</script>';
-            echo '<script> location.href="../products.php";</script>';
+            echo '<script> location.href="/' . $base_path . '/Admin/products.php";</script>';
         }
     } else {
         echo '<script> window.alert("Unable to upload file")</script>';
@@ -97,7 +97,7 @@ if (isset($_REQUEST['done'])) {
 
 //To close the page
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="../products.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/Admin/products.php";</script>';
 }
 
 ?>
