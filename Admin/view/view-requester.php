@@ -1,6 +1,6 @@
 <?php
 session_start();
-$base_path = 'CRM-eCOMMERCE';
+$base_path = 'mecom';
 include('../../DBConnection.php'); //Database connection
 include('../layout/isadmin.php');
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$base_path = 'CRM-eCOMMERCE';
+$base_path = 'mecom';
 
 session_unset();
 session_destroy();

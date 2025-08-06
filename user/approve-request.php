@@ -1,5 +1,5 @@
 <?php
-$base_path = 'CRM-eCOMMERCE';
+$base_path = 'mecom';
 include('layout/islogin.php');
 
 //fetching service assign table row

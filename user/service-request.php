@@ -1,6 +1,6 @@
 <?php
 session_start();
-$base_path = 'CRM-eCOMMERCE';
+$base_path = 'mecom';
 define('PAGE', 'servicerequest');
 define('TITLE', 'Request_Setvice');
 include('../DBConnection.php');

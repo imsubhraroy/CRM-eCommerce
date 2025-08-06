@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$base_path = 'CRM-eCOMMERCE';
+$base_path = 'mecom';
 define('PAGE', 'dashboard'); //definr page value which declare in adminheader.php
 define('TITLE', 'dashboard'); //define page title
 include('../DBConnection.php'); //database connection

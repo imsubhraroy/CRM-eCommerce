@@ -1,4 +1,4 @@
-<<?php $base_path = 'CRM-eCOMMERCE'; ?>
+<<?php $base_path = 'mecom'; ?>
   <!doctype html>
   <html lang="en">
 

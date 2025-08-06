@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$base_path = 'CRM-eCOMMERCE';
+$base_path = 'mecom';
 define('PAGE', 'work');
 define('TITLE', 'workorder');
 include('../DBConnection.php');

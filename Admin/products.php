@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$base_path = 'CRM-eCOMMERCE';
+$base_path = 'mecom';
 define('PAGE', 'assets');        //define page name
 define('TITLE', 'assets');       //define page title
 include('../DBConnection.php');  //database connection

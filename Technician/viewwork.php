@@ -1,6 +1,6 @@
 <?php
 session_start();
-$base_path = 'CRM-eCOMMERCE';
+$base_path = 'mecom';
 if (!isset($_SESSION['is_technician'])) {
     header('location: technicianlogin.php');
 }

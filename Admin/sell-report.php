@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$base_path = 'CRM-eCOMMERCE';
+$base_path = 'mecom';
 define('PAGE', 'sellreport');
 define('TITLE', 'sellreport');
 include('../DBConnection.php');

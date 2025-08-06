@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <!--start Navigation -->
 <?php
-$base_path = 'CRM-eCOMMERCE';
+$base_path = 'mecom';
 include('layout/header.php')
 
 ?>
