@@ -1,6 +1,6 @@
 <?php
 session_start();
-$base_path = 'mecom';
+$base_path  = '';
 define('PAGE', 'servicerequest');
 define('TITLE', 'Request_Setvice');
 include('../DBConnection.php');

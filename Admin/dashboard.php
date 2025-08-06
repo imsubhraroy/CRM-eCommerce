@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$base_path = 'mecom';
+$base_path  = '';
 define('PAGE', 'dashboard'); //definr page value which declare in adminheader.php
 define('TITLE', 'dashboard'); //define page title
 include('../DBConnection.php'); //database connection

@@ -1,7 +1,7 @@
 <?php
 include('DBConnection.php');  //database connection
 session_start();
-$base_path = 'mecom';
+$base_path  = '';
 
 if (isset($_REQUEST['rSignup'])) {
   $name = $_REQUEST['rName'];

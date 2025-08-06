@@ -1,6 +1,6 @@
 <?php
 session_start();
-$base_path = 'mecom';
+$base_path  = '';
 
 session_unset();
 session_destroy();

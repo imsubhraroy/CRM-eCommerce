@@ -1,6 +1,6 @@
 <?php
 session_start();
-$base_path = 'mecom';
+$base_path  = '';
 if (!isset($_SESSION['is_technician'])) {
     header('location: technicianlogin.php');
 }

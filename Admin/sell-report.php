@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$base_path = 'mecom';
+$base_path  = '';
 define('PAGE', 'sellreport');
 define('TITLE', 'sellreport');
 include('../DBConnection.php');

@@ -1,5 +1,5 @@
 <?php
-$base_path = 'mecom';
+$base_path  = '';
 include('../DBConnection.php'); //database connection
 include('layout/isadmin.php');
 

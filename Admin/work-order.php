@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$base_path = 'mecom';
+$base_path  = '';
 define('PAGE', 'work');
 define('TITLE', 'workorder');
 include('../DBConnection.php');

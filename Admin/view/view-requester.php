@@ -1,6 +1,6 @@
 <?php
 session_start();
-$base_path = 'mecom';
+$base_path  = '';
 include('../../DBConnection.php'); //Database connection
 include('../layout/isadmin.php');
 

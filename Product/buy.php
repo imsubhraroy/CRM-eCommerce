@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$base_path = 'mecom';
+$base_path  = '';
 include('../DBConnection.php');
 include('layout/header.php');
 include('../user/layout/islogin.php');

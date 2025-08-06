@@ -2,7 +2,7 @@
     <h3>Related Products</h3>
 </div>
 <?php
-$base_path = 'mecom';
+$base_path  = '';
 $sql1 = "SELECT * FROM product";
 $result1 = mysqli_query($conn, $sql1);
 if ($result) {

@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <!--start Navigation -->
 <?php
-$base_path = 'mecom';
+$base_path  = '';
 include('layout/header.php')
 
 ?>

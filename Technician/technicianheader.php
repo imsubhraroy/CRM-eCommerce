@@ -1,4 +1,4 @@
-<?php $base_path = 'mecom'; ?>
+<?php $base_path  = ''; ?>
 
 <!doctype html>
 <html lang="en">
