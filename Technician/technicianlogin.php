@@ -13,7 +13,7 @@ if (isset($_REQUEST['tlogin'])) {
     if (mysqli_num_rows($result) == 1) {
         $rows = mysqli_fetch_assoc($result);
         $_SESSION['is_technician'] = $rows['id'];
-        echo '<script> location.href="/' . $base_path . '/Technician/technicianworkorder.php"</script>';
+        echo '<script> location.href="/' . $base_path . '/technician/technicianworkorder.php"</script>';
     } else {
         echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
              Enter Email or Password correctly.

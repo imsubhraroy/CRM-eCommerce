@@ -32,7 +32,7 @@
 
 <!-- Top navbar -->
 <nav class="navbar navbar-dark fixed-top bg-info p-0 shadow">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/<?= $base_path ?>/Admin/dashboard.php"><span style="color:rebeccapurple;">MeCoM</span></a>
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/<?= $base_path ?>/admin/dashboard.php"><span style="color:rebeccapurple;">MeCoM</span></a>
  </nav>
 
  <!--start Side Bar -->
@@ -43,55 +43,55 @@
     <div class="sidebar-sticky">
      <ul class="nav flex-column">
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'dashboard') { echo 'active'; } ?> " href="/<?= $base_path ?>/Admin/dashboard.php">
+       <a class="nav-link text-white <?php if(PAGE == 'dashboard') { echo 'active'; } ?> " href="/<?= $base_path ?>/admin/dashboard.php">
         <i class="fas fa-tachometer-alt"></i>
         Dashboard
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'work') { echo 'active'; } ?>" href="/<?= $base_path ?>/Admin/work-order.php">
+       <a class="nav-link text-white <?php if(PAGE == 'work') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/work-order.php">
         <i class="fab fa-accessible-icon"></i>
         Work Order
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'request') { echo 'active'; } ?>" href="/<?= $base_path ?>/Admin/user-request.php">
+       <a class="nav-link text-white <?php if(PAGE == 'request') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/user-request.php">
         <i class="fas fa-align-center"></i>
         Requests
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'assets') { echo 'active'; } ?>" href="/<?= $base_path ?>/Admin/products.php">
+       <a class="nav-link text-white <?php if(PAGE == 'assets') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/products.php">
         <i class="fas fa-database"></i>
         Assets
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'technician') { echo 'active'; } ?>" href="/<?= $base_path ?>/Admin/technician.php">
+       <a class="nav-link text-white <?php if(PAGE == 'technician') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/technician.php">
         <i class="fab fa-teamspeak"></i>
         Technician
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'requesters') { echo 'active'; } ?>" href="/<?= $base_path ?>/Admin/requester.php">
+       <a class="nav-link text-white <?php if(PAGE == 'requesters') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/requester.php">
         <i class="fas fa-users"></i>
         Requester
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'bookingdetails') { echo 'active'; } ?>" href="/<?= $base_path ?>/Admin/booking-details.php">
+       <a class="nav-link text-white <?php if(PAGE == 'bookingdetails') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/booking-details.php">
         <i class="fas fa-users"></i>
         Product Booking Details
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'sellreport') { echo 'active'; } ?>" href="/<?= $base_path ?>/Admin/sell-report.php">
+       <a class="nav-link text-white <?php if(PAGE == 'sellreport') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/sell-report.php">
         <i class="fas fa-table"></i>
         Sell Report
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'workreport') { echo 'active'; } ?>" href="/<?= $base_path ?>/Admin/work-report.php">
+       <a class="nav-link text-white <?php if(PAGE == 'workreport') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/work-report.php">
         <i class="fas fa-table"></i>
         Work Report
        </a>

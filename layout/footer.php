@@ -67,7 +67,7 @@
             Useful links
           </h6>
           <p>
-            <a href="/<?= $base_path ?>/Technician/technicianlogin.php" class="text-reset text-decoration-none">Technician Login</a>
+            <a href="/<?= $base_path ?>/technician/technicianlogin.php" class="text-reset text-decoration-none">Technician Login</a>
           </p>
         </div>
         <!-- Grid column -->

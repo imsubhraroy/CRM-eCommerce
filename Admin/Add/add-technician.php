@@ -15,7 +15,7 @@ if (isset($_REQUEST['addemp'])) {
     $sql = "INSERT INTO technician_tb(name,email,city,mobile,pass) VALUES ('$name','$email','$city','$mobile','$pass')";
     $result = mysqli_query($conn, $sql);
     if ($result) {
-        echo '<script> location.href="/' . $base_path . '/Admin/Add/technician.php"</script>';
+        echo '<script> location.href="/' . $base_path . '/admin/Add/technician.php"</script>';
     } else {
         echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
              Enter Email or Password correctly.

@@ -87,7 +87,7 @@ if (isset($_REQUEST['view'])) {
   $viewid = $_REQUEST['rid'];
   $_SESSION['viewid'] = $viewid;
 
-  echo '<script> location.href="/' . $base_path . '/Admin/view/view-assignwork.php";</script>';
+  echo '<script> location.href="/' . $base_path . '/admin/view/view-assignwork.php";</script>';
 }
 
 
@@ -99,7 +99,7 @@ if (isset($_REQUEST['delete'])) {
   $result1 = mysqli_query($conn, $sql1);
   if ($result1) {
     echo '<script> window.alert("Data delete successfuly");</script>';
-    echo '<script> location.href="/' . $base_path . '/Admin/work-order.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/admin/work-order.php";</script>';
   }
 }
 

@@ -2,7 +2,7 @@
 session_start();
 $base_path  = '';
 include('../DBConnection.php'); //database connection
-include('../Admin/layout/isadmin.php');
+include('../admin/layout/isadmin.php');
 
 $did = $_GET['id'];
 
@@ -110,7 +110,7 @@ $row = mysqli_fetch_assoc($result2);
 
 <?php
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="/' . $base_path . '/Admin/booking-details.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/admin/booking-details.php";</script>';
 }
 
 

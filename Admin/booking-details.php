@@ -58,12 +58,12 @@ if ($result) {
           <td><?php if (isset($rows['uid'])) {
                 echo $rows['uid'];
               } ?></td>
-          <td> <a class="btn btn-primary me-2" href="/<?= $base_path ?>/Delivary/viewproduct.php?id=<?php echo $rows['pid'] ?>"><i class="fa-solid fa-eye"></i></a>
+          <td> <a class="btn btn-primary me-2" href="/<?= $base_path ?>/delivary/viewproduct.php?id=<?php echo $rows['pid'] ?>"><i class="fa-solid fa-eye"></i></a>
           </td>
           <td><?php if (isset($rows['u_email'])) {
                 echo $rows['u_email'];
               } ?></td>
-          <td><a class="btn btn-primary me-2" href="/<?= $base_path ?>/Delivary/view-address.php?id=<?php echo $rows['id'] ?>"><i class="fa-solid fa-eye"></i></a></td>
+          <td><a class="btn btn-primary me-2" href="/<?= $base_path ?>/delivary/view-address.php?id=<?php echo $rows['id'] ?>"><i class="fa-solid fa-eye"></i></a></td>
           <td><?php if (isset($rows['u_mobile'])) {
                 echo $rows['u_mobile'];
               } ?></td>

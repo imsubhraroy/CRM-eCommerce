@@ -43,7 +43,7 @@
               <a class="nav-link" href="/<?= $base_path ?>/user/service-request.php">Request</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link" href="/<?= $base_path ?>/Product/products.php">Product</a>
+              <a class="nav-link" href="/<?= $base_path ?>/product/products.php">Product</a>
             </li>
             <?php  //To check if the user is login or not
             if (!isset($_SESSION['is_login'])) {

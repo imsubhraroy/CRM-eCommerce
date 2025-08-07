@@ -102,11 +102,11 @@ if (isset($_REQUEST['pay'])) {
     $sql1 = "UPDATE FROM product SET quantity= $current_quantity WHERE id=$pid";
 
 
-    echo '<script> location.href="/' . $base_path . '/Product/products.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/product/products.php";</script>';
 }
 
 if (isset($_REQUEST['profile'])) {
-    echo '<script> location.href="/' . $base_path . '/Product/products.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/product/products.php";</script>';
 }
 
 ?>

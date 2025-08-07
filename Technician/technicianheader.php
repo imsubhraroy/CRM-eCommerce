@@ -33,7 +33,7 @@
             <li class="nav-item">
               <a class="nav-link text-white <?php if (PAGE == 'work') {
                                               echo 'active';
-                                            } ?>" href="/<?= $base_path ?>/Technician/technicianworkorder.php">
+                                            } ?>" href="/<?= $base_path ?>/technician/technicianworkorder.php">
                 <i class="fab fa-accessible-icon"></i>
                 Work Order
               </a>

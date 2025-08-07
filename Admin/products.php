@@ -9,7 +9,7 @@ include('layout/adminheader.php');      //Side navbar
 include('layout/isadmin.php');
 
 echo '<div class="col-sm-9 col-md-10">'; //Column start
-echo '    <a class="btn btn-primary mt-3 mb-4" href="/' . $base_path . '/Admin/Add/add-product.php">Add Product</a>   <!-- add product Modal -->
+echo '    <a class="btn btn-primary mt-3 mb-4" href="/' . $base_path . '/admin/Add/add-product.php">Add Product</a>   <!-- add product Modal -->
               <p class=" bg-dark text-white p-2 text-center">List of Product</p>';
 // include('addproduct.php');
 
@@ -69,7 +69,7 @@ if ($result) {
 if(isset($_REQUEST['view'])){
   $pid=$_REQUEST['pid'];
   $_SESSION['product_id']=$pid;
-  echo '<script> location.href="/' . $base_path . '/Admin/view/view-product.php";</script>';
+  echo '<script> location.href="/' . $base_path . '/admin/view/view-product.php";</script>';
 }
 
 //Delete Table data
@@ -80,11 +80,11 @@ if(isset($_REQUEST['delete'])){
   $result1=mysqli_query($conn,$sql1);
   if($result1){
     echo '<script> window.alert("Data delete successfuly");</script>';
-    echo '<script> location.href="/' . $base_path . '/Admin/products.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/admin/products.php";</script>';
   }
   else{
     echo '<script> window.alert("Unable to delete data");</script>';
-    echo '<script> location.href="/' . $base_path . '/Admin/products.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/admin/products.php";</script>';
   }
 }
 

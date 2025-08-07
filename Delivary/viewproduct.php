@@ -3,7 +3,7 @@ session_start();
 include('../DBConnection.php'); //Database connection
 $base_path  = '';
 
-include('../Admin/layout/isadmin.php');
+include('../admin/layout/isadmin.php');
 
 $id = $_GET['id'];
 
@@ -94,7 +94,7 @@ $file_name = $row['image'];
 <?php
 //To close the page
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="/' . $base_path . '/Admin/booking-details.php";</script>';
+    echo '<script> location.href="/' . $base_path . '/admin/booking-details.php";</script>';
 }
 
 ?>

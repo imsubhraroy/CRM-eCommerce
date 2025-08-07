@@ -1,6 +1,6 @@
 <?php $base_path  = ''; ?>
 <div class="card mt-4 mb-4 shadow" style="width: 12rem; border:none; ">
-    <a href="/<?= $base_path ?>/Product/product_details.php?id=<?php echo $row['id'];  ?>&name=<?php echo $row['name']; ?>&price=<?php echo $row['selling_price'];  ?> " class="text-reset text-decoration-none"><img src="../products_Image/<?php echo $file_name; ?>" class="card-img-top" alt=" <?php echo $row['name']; ?>"></a>
+    <a href="/<?= $base_path ?>/product/product_details.php?id=<?php echo $row['id'];  ?>&name=<?php echo $row['name']; ?>&price=<?php echo $row['selling_price'];  ?> " class="text-reset text-decoration-none"><img src="../products_Image/<?php echo $file_name; ?>" class="card-img-top" alt=" <?php echo $row['name']; ?>"></a>
     <div class="card-body">
         <a href="#" class="text-reset text-decoration-none" onclick="store()">
             <p class="card-text text-center text-success"><?php echo $row['name']; ?></p>

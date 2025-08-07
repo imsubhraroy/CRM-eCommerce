@@ -39,7 +39,7 @@ $totaltech = $row['emp'];
           <h4 class="card-title">
             <?php echo $totaltech; ?>
           </h4>
-          <a class="btn text-white" href="/<?= $base_path ?>/Admin/technician.php">View</a>
+          <a class="btn text-white" href="/<?= $base_path ?>/admin/technician.php">View</a>
         </div>
       </div>
     </div>
@@ -50,7 +50,7 @@ $totaltech = $row['emp'];
           <h4 class="card-title">
             <?php echo $servicedone; ?>
           </h4>
-          <a class="btn text-white" href="/<?= $base_path ?>/Admin/workorder.php">View</a>
+          <a class="btn text-white" href="/<?= $base_path ?>/admin/workorder.php">View</a>
         </div>
       </div>
     </div>
@@ -123,7 +123,7 @@ $totaltech = $row['emp'];
       $id = $_REQUEST['tid'];
       $_SESSION['servicedone_id'] = $id;
 
-      echo '<script> location.href="/' . $base_path . '/Admin/view/view-done-services.php";</script>';
+      echo '<script> location.href="/' . $base_path . '/admin/view/view-done-services.php";</script>';
     }
     if (isset($_REQUEST['delete'])) {
       $id = $_REQUEST['tid'];
@@ -132,10 +132,10 @@ $totaltech = $row['emp'];
       $result = mysqli_query($conn, $sql);
       if ($result) {
         echo '<script> window.alert("Data Deleted Succesfully")</script>';
-        echo '<script> location.href="/' . $base_path . '/Admin/work-report.php";</script>';
+        echo '<script> location.href="/' . $base_path . '/admin/work-report.php";</script>';
       } else {
         echo '<script> window.alert("Unable to delete data")</script>';
-        echo '<script> location.href="/' . $base_path . '/Admin/work-report.php";</script>';
+        echo '<script> location.href="/' . $base_path . '/admin/work-report.php";</script>';
       }
     }
     ?>
