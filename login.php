@@ -16,9 +16,9 @@ if (isset($_REQUEST['rlogin'])) {
         $_SESSION['is_login'] = $rows['id'];
         if ($email == 'admin@gmail.com' && $pass == 'admin123') {
             $_SESSION['is_admin'] = $rows['id'];
-            echo '<script> location.href="/' . $base_path . '/admin/dashboard.php"</script>';
+            echo '<script> location.href="/admin/dashboard.php"</script>';
         }
-        echo '<script> location.href="/' . $base_path . '/index.php"</script>';
+        echo '<script> location.href="/index.php"</script>';
     } else {
         echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
              Enter Email or Password correctly.

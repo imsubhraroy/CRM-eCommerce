@@ -22,7 +22,7 @@ if (isset($_REQUEST['rSignup'])) {
   else {
     $sql = "INSERT INTO signup(name,email,password) VALUES('$name','$email','$password')";
     $result = mysqli_query($conn, $sql);
-    echo '<script> location.href="/' . $base_path . '/login.php"</script>';
+    echo '<script> location.href="/login.php"</script>';
   }
 }
 ?>

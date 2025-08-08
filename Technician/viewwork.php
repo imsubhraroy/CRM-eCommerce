@@ -142,6 +142,6 @@ if ($result) {
 
 //To close the table
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="/' . $base_path . '/technician/technicianworkorder.php";</script>';
+    echo '<script> location.href="/technician/technicianworkorder.php";</script>';
 }
 ?>

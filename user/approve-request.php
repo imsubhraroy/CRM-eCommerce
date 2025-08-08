@@ -141,7 +141,7 @@ if ($result2) {
             $sql3 = "DELETE FROM serviceassign WHERE rid=$id";
             $res = mysqli_query($conn, $sql3);
             if ($res) {
-                echo '<script> location.href="/' . $base_path . '/user/checkstatus.php"</script>';
+                echo '<script> location.href="/user/checkstatus.php"</script>';
             } else {
                 $msg = '<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
                      Unable to submit request, Try again after some times.

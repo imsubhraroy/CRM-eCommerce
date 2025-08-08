@@ -94,7 +94,7 @@ $file_name = $row['image'];
 <?php
 //To close the page
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="/' . $base_path . '/admin/booking-details.php";</script>';
+    echo '<script> location.href="/admin/booking-details.php";</script>';
 }
 
 ?>

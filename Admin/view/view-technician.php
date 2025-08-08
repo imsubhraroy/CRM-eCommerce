@@ -88,7 +88,7 @@ $row = mysqli_fetch_assoc($result2);
 
 <?php
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="/' . $base_path . '/admin/technician.php";</script>';
+    echo '<script> location.href="/admin/technician.php";</script>';
 }
 
 //To update technician_tb table data
@@ -102,10 +102,10 @@ if (isset($_REQUEST['update'])) {
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo '<script> window.alert("Data Updated Successfully")</script>';
-        echo '<script> location.href="/' . $base_path . '/admin/technician.php";</script>';
+        echo '<script> location.href="/admin/technician.php";</script>';
     } else {
         echo '<script> window.alert("Unable to Update")</script>';
-        echo '<script> location.href="/' . $base_path . '/admin/technician.php";</script>';
+        echo '<script> location.href="/admin/technician.php";</script>';
     }
 }
 

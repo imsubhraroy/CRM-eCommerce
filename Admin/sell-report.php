@@ -158,7 +158,7 @@ if (isset($_REQUEST['delete'])) {
   $result1 = mysqli_query($conn, $sql1);
   if ($result1) {
     echo '<script> window.alert("Data delete successfuly");</script>';
-    echo '<script> location.href="/' . $base_path . '/admin/sell-report.php";</script>';
+    echo '<script> location.href="/admin/sell-report.php";</script>';
   }
 }
 

@@ -25,7 +25,7 @@ if (isset($_SESSION['is_login'])) { ?>
             <?php }
     } else {
         echo '<script> window.alert("You are not login")</script>';
-        echo '<script> location.href="/' . $base_path . '/index.php"</script>';
+        echo '<script> location.href="/index.php"</script>';
     }
 
     //Fetching row from serviceassign table
@@ -173,7 +173,7 @@ if (isset($_SESSION['is_login'])) { ?>
         $result = mysqli_query($conn, $sql2);
 
         if ($result) {
-            echo '<script> location.href="/' . $base_path . '/user/check-status.php"</script>';
+            echo '<script> location.href="/user/check-status.php"</script>';
         } else {
             $msg = '<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
              Unable to submit request, Try again after some times.

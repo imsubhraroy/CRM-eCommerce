@@ -73,7 +73,7 @@ $row = mysqli_fetch_assoc($result2);
 <?php
 //To close the page
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="/' . $base_path . '/admin/requester.php";</script>';
+    echo '<script> location.href="/admin/requester.php";</script>';
 }
 
 //To update the signup table row
@@ -85,10 +85,10 @@ if (isset($_REQUEST['update'])) {
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo '<script> window.alert("Data Updated Successfully")</script>';
-        echo '<script> location.href="/' . $base_path . '/admin/requester.php";</script>';
+        echo '<script> location.href="/admin/requester.php";</script>';
     } else {
         echo '<script> window.alert("Unable to Update")</script>';
-        echo '<script> location.href="/' . $base_path . '/admin/requester.php";</script>';
+        echo '<script> location.href="/admin/requester.php";</script>';
     }
 }
 

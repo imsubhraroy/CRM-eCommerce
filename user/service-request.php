@@ -33,7 +33,7 @@ if (isset($_REQUEST['submitrequest'])) {
    Your Request Submitted Successfully. Your Id is ' . $genid . '
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>';
-    echo '<script> location.href="/' . $base_path . '/user/submitrequest-succesfully.php"</script>';
+    echo '<script> location.href="/user/submitrequest-succesfully.php"</script>';
   } else {
     $msg = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
    Unable to submit request, Try again after some times.

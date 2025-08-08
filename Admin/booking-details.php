@@ -110,7 +110,7 @@ if (isset($_REQUEST['done'])) {
     $sql = "DELETE FROM delivery_details where id=$did";
     $result1 = mysqli_query($conn, $sql);
 
-    echo '<script>location.href="/' . $base_path . '/booking-details.php"</script>';
+    echo '<script>location.href="/booking-details.php"</script>';
   }
 }
 

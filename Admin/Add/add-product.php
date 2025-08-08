@@ -84,10 +84,10 @@ if (isset($_REQUEST['done'])) {
             // $sql = "DELETE FROM serviceassign where rid=$rid";   //To delete row from serviceassign table
             // $result = mysqli_query($conn, $sql);
             echo '<script> window.alert("Data Update Succesfully")</script>';
-            echo '<script> location.href="/' . $base_path . '/admin/products.php";</script>';
+            echo '<script> location.href="/admin/products.php";</script>';
         } else {
             echo '<script> window.alert("Unable to update data")</script>';
-            echo '<script> location.href="/' . $base_path . '/admin/products.php";</script>';
+            echo '<script> location.href="/admin/products.php";</script>';
         }
     } else {
         echo '<script> window.alert("Unable to upload file")</script>';
@@ -97,7 +97,7 @@ if (isset($_REQUEST['done'])) {
 
 //To close the page
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="/' . $base_path . '/admin/products.php";</script>';
+    echo '<script> location.href="/admin/products.php";</script>';
 }
 
 ?>

@@ -110,7 +110,7 @@ $row = mysqli_fetch_assoc($result2);
 
 <?php
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="/' . $base_path . '/admin/booking-details.php";</script>';
+    echo '<script> location.href="/admin/booking-details.php";</script>';
 }
 
 

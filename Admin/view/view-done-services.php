@@ -156,16 +156,16 @@ if (isset($_REQUEST['update'])) {
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo '<script> window.alert("Data Update Successfully")</script>';
-        echo '<script> location.href="/' . $base_path . '/admin/work-report.php";</script>';
+        echo '<script> location.href="/admin/work-report.php";</script>';
     } else {
         echo '<script> window.alert("Unable to update data")</script>';
-        echo '<script> location.href="/' . $base_path . '/admin/work-report.php";</script>';
+        echo '<script> location.href="/admin/work-report.php";</script>';
     }
 }
 
 //To close the page
 if (isset($_REQUEST['close'])) {
-    echo '<script> location.href="/' . $base_path . '/admin/work-report.php";</script>';
+    echo '<script> location.href="/admin/work-report.php";</script>';
 }
 
 ?>

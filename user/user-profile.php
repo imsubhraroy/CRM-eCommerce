@@ -32,14 +32,14 @@ if (isset($_REQUEST['nameupdate'])) {
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>';
 
-        echo '<script> location.href="/' . $base_path . '/user/user-profile.php"</script>';
+        echo '<script> location.href="/user/user-profile.php"</script>';
     } else {
         $passmsg = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
          Something went wrong. Try again.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>';
 
-        echo '<script> location.href="/' . $base_path . '/user/user-profile.php"</script>';
+        echo '<script> location.href="/user/user-profile.php"</script>';
     }
 }
 

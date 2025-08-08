@@ -76,7 +76,7 @@ if ($result) {
 if (isset($_REQUEST['view'])) {
   $tid = $_REQUEST['tid'];
   $_SESSION['tid'] = $tid;
-  echo '<script> location.href="/' . $base_path . '/admin/view/view-technician.php";</script>';
+  echo '<script> location.href="/admin/view/view-technician.php";</script>';
 }
 
 //For delete table data
@@ -87,10 +87,10 @@ if (isset($_REQUEST['delete'])) {
   $result1 = mysqli_query($conn, $sql1);
   if ($result1) {
     echo '<script> window.alert("Data delete successfuly");</script>';
-    echo '<script> location.href="/' . $base_path . '/admin/technician.php";</script>';
+    echo '<script> location.href="/admin/technician.php";</script>';
   } else {
     echo '<script> window.alert("Unable to delete data");</script>';
-    echo '<script> location.href="/' . $base_path . '/admin/technician.php";</script>';
+    echo '<script> location.href="/admin/technician.php";</script>';
   }
 }
 

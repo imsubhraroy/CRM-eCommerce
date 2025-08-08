@@ -138,7 +138,7 @@ if (isset($_REQUEST['assign'])) {    //fetching all input field value
         $sql4 = "DELETE FROM servicerequest WHERE id=$rid";
         $result4 = mysqli_query($conn, $sql4);
         echo '<script> window.alert("Data inserted successfully");</script>';
-        echo '<script> location.href="/' . $base_path . '/user-request.php";</script>';
+        echo '<script> location.href="/user-request.php";</script>';
     } else {
         echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
              Something went wrong. Try again.
@@ -153,7 +153,7 @@ if (isset($_REQUEST['assign'])) {    //fetching all input field value
     $result4 = mysqli_query($conn, $sql1);
     if ($result4) {
 
-        echo '<script> location.href="/' . $base_path . '/user-request.php";</script>';
+        echo '<script> location.href="/user-request.php";</script>';
     } else {
         echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                  Something went wrong. Try again.

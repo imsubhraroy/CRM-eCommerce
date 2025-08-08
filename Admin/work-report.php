@@ -123,7 +123,7 @@ $totaltech = $row['emp'];
       $id = $_REQUEST['tid'];
       $_SESSION['servicedone_id'] = $id;
 
-      echo '<script> location.href="/' . $base_path . '/admin/view/view-done-services.php";</script>';
+      echo '<script> location.href="/admin/view/view-done-services.php";</script>';
     }
     if (isset($_REQUEST['delete'])) {
       $id = $_REQUEST['tid'];
@@ -132,10 +132,10 @@ $totaltech = $row['emp'];
       $result = mysqli_query($conn, $sql);
       if ($result) {
         echo '<script> window.alert("Data Deleted Succesfully")</script>';
-        echo '<script> location.href="/' . $base_path . '/admin/work-report.php";</script>';
+        echo '<script> location.href="/admin/work-report.php";</script>';
       } else {
         echo '<script> window.alert("Unable to delete data")</script>';
-        echo '<script> location.href="/' . $base_path . '/admin/work-report.php";</script>';
+        echo '<script> location.href="/admin/work-report.php";</script>';
       }
     }
     ?>

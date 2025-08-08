@@ -103,7 +103,7 @@ if (isset($_REQUEST['view'])) {
 if (isset($_REQUEST['done'])) {
   $tviewid = $_REQUEST['rid'];
   $_SESSION['tviewid'] = $tviewid;
-  echo '<script> location.href="/' . $base_path . '/technician/workdone.php";</script>';
+  echo '<script> location.href="/technician/workdone.php";</script>';
 }
 
   ?>

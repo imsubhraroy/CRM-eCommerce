@@ -65,7 +65,7 @@ if ($_SESSION['is_login']) {
 
 if(isset($_REQUEST['close']))
 {
-   echo '<script> location.href="/' . $base_path . '/index.php"</script>';
+   echo '<script> location.href="/index.php"</script>';
 
 }
 include('../layout/footer.php')  //footer
