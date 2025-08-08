@@ -1,7 +1,7 @@
 <?php
     $server="localhost";
     $root="root";
-    $pass="";
+    $pass="VPS@MySQL#1";
     $dbname="osms";
 
     $conn=mysqli_connect($server,$root,$pass,$dbname);
