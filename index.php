@@ -18,8 +18,8 @@ include('layout/header.php')
 
     if (!isset($_SESSION['is_login'])) {
     ?>
-      <a href="/<?= $base_path ?>/login.php" class="btn btn-success mr-4">Sign In</a>
-      <a href="/<?= $base_path ?>/Registration.php" class="btn btn-danger mr-4">Sign Up</a>
+      <a href="/login.php" class="btn btn-success mr-4">Sign In</a>
+      <a href="/Registration.php" class="btn btn-danger mr-4">Sign Up</a>
     <?php } ?>
   </div>
 </section> <!-- End Header Jumbotron -->

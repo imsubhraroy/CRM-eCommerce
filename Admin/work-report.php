@@ -39,7 +39,7 @@ $totaltech = $row['emp'];
           <h4 class="card-title">
             <?php echo $totaltech; ?>
           </h4>
-          <a class="btn text-white" href="/<?= $base_path ?>/admin/technician.php">View</a>
+          <a class="btn text-white" href="/admin/technician.php">View</a>
         </div>
       </div>
     </div>
@@ -50,7 +50,7 @@ $totaltech = $row['emp'];
           <h4 class="card-title">
             <?php echo $servicedone; ?>
           </h4>
-          <a class="btn text-white" href="/<?= $base_path ?>/admin/workorder.php">View</a>
+          <a class="btn text-white" href="/admin/workorder.php">View</a>
         </div>
       </div>
     </div>

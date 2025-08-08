@@ -32,7 +32,7 @@ if ($result) {
                 <p><b>Description</b></p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod inventore possimus temporibus minus, deleniti ut quidem laborum voluptas, delectus qui molestias dignissimos expedita et ducimus velit culpa maxime vitae aliquam? Est ex nobis pariatur enim dolor consequuntur beatae natus autem dolore possimus. Vero ad ipsam nesciunt incidunt, est modi facere.</p>
 
-                <a href="/<?= $base_path ?>/product/buy.php" class="btn btn-warning px-3 py-2 mt-5 mb-5" style="margin-left:500px;"><b>Buy Now</b></a>
+                <a href="/product/buy.php" class="btn btn-warning px-3 py-2 mt-5 mb-5" style="margin-left:500px;"><b>Buy Now</b></a>
             </div>
         </div>
     </div>

@@ -39,7 +39,7 @@ $delivered = $row['delivered'];
           <h4 class="card-title">
             <?php echo $delivery_pending; ?>
           </h4>
-          <a class="btn text-white" href="/<?= $base_path ?>/admin/booking-details.php">View</a>
+          <a class="btn text-white" href="/admin/booking-details.php">View</a>
         </div>
       </div>
     </div>
@@ -50,7 +50,7 @@ $delivered = $row['delivered'];
           <h4 class="card-title">
             <?php echo $totalprofit; ?>
           </h4>
-          <a class="btn text-white" href="/<?= $base_path ?>/admin/workorder.php">View</a>
+          <a class="btn text-white" href="/admin/workorder.php">View</a>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@ $delivered = $row['delivered'];
           <h4 class="card-title">
             <?php echo $delivered; ?>
           </h4>
-          <a class="btn text-white" href="/<?= $base_path ?>/admin/technician.php">View</a>
+          <a class="btn text-white" href="/admin/technician.php">View</a>
         </div>
       </div>
     </div>
@@ -105,12 +105,12 @@ $delivered = $row['delivered'];
               <td><?php if (isset($rows['uid'])) {
                     echo $rows['uid'];
                   } ?></td>
-              <td> <a class="btn btn-primary me-2" href="/<?= $base_path ?>/delivary/viewproduct.php?id=<?php echo $rows['pid'] ?>"><i class="fa-solid fa-eye"></i></a>
+              <td> <a class="btn btn-primary me-2" href="/delivary/viewproduct.php?id=<?php echo $rows['pid'] ?>"><i class="fa-solid fa-eye"></i></a>
               </td>
               <td><?php if (isset($rows['email'])) {
                     echo $rows['email'];
                   } ?></td>
-              <td><a class="btn btn-primary me-2" href="/<?= $base_path ?>/delivary/view-address.php?id=<?php echo $rows['id'] ?>"><i class="fa-solid fa-eye"></i></a></td>
+              <td><a class="btn btn-primary me-2" href="/delivary/view-address.php?id=<?php echo $rows['id'] ?>"><i class="fa-solid fa-eye"></i></a></td>
               <td><?php if (isset($rows['mobile'])) {
                     echo $rows['mobile'];
                   } ?></td>

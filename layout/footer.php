@@ -55,7 +55,7 @@
             Products
           </h6>
           <p>
-            <a href="/<?= $base_path ?>/user/service-request.php" class="text-reset text-decoration-none">Request</a>
+            <a href="/user/service-request.php" class="text-reset text-decoration-none">Request</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -67,7 +67,7 @@
             Useful links
           </h6>
           <p>
-            <a href="/<?= $base_path ?>/technician/technicianlogin.php" class="text-reset text-decoration-none">Technician Login</a>
+            <a href="/technician/technicianlogin.php" class="text-reset text-decoration-none">Technician Login</a>
           </p>
         </div>
         <!-- Grid column -->

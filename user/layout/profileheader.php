@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- custom css -->
-  <link rel="stylesheet" href="/<?= $base_path ?>/CSS/custom.css">
+  <link rel="stylesheet" href="/CSS/custom.css">
 
   <style>
     .active {
@@ -43,7 +43,7 @@
             <li class="nav-item ">
               <a class="nav-link text-dark <?php if (PAGE == 'userprofile') {
                                               echo 'active';
-                                            } ?>" href="/<?= $base_path ?>/user/user-profile.php">
+                                            } ?>" href="/user/user-profile.php">
                 <i class="fas fa-user"></i>
                 Profile <span class="sr-only">(current)</span>
               </a>
@@ -51,7 +51,7 @@
             <li class="nav-item">
               <a class="nav-link text-white <?php if (PAGE == 'checkstatus') {
                                               echo 'active';
-                                            } ?>" href="/<?= $base_path ?>/user/check-status.php">
+                                            } ?>" href="/user/check-status.php">
                 <i class="fas fa-align-center"></i>
                 Service Status
               </a>
@@ -59,7 +59,7 @@
             <li class="nav-item">
               <a class="nav-link text-white <?php if (PAGE == 'servicedone') {
                                               echo 'active';
-                                            } ?>" href="/<?= $base_path ?>/user/service-done.php">
+                                            } ?>" href="/user/service-done.php">
                 <i class="fas fa-align-center"></i>
                 Service
               </a>
@@ -67,7 +67,7 @@
             <li class="nav-item">
               <a class="nav-link text-white <?php if (PAGE == 'checkorder') {
                                               echo 'active';
-                                            } ?>" href="/<?= $base_path ?>/user/check-order.php">
+                                            } ?>" href="/user/check-order.php">
                 <i class="fas fa-align-center"></i>
                 Order
               </a>
@@ -75,13 +75,13 @@
             <li class="nav-item">
               <a class="nav-link text-white <?php if (PAGE == 'changepassword') {
                                               echo 'active';
-                                            } ?>" href="/<?= $base_path ?>/user/changepassword.php">
+                                            } ?>" href="/user/changepassword.php">
                 <i class="fas fa-key"></i>
                 Change Password
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="/<?= $base_path ?>/logout.php">
+              <a class="nav-link text-white" href="/logout.php">
                 <i class="fas fa-sign-out-alt"></i>
                 Logout
               </a>

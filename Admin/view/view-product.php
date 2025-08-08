@@ -35,7 +35,7 @@ $file_name = $row['image'];
             <div class="col-md-6 offset-md-3 bg-success bg-opacity-25 py-3"> <!--start of column-->
                 <!--start of form-->
                 <div>
-                    <img src="/<?= $base_path ?>/products_Image/<?php if (isset($row['image'])) {
+                    <img src="/products_Image/<?php if (isset($row['image'])) {
                                                                     echo $row['image'];
                                                                 } ?>" alt="" class="card-img-top mb-5 mt-3" style="height: 400px;">
                 </div>

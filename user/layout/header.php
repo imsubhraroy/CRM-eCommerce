@@ -15,7 +15,7 @@
 
     <!-- custom css -->
     <!-- <link rel="stylesheet" href="../../CSS/"> -->
-    <link rel="stylesheet" href="/<?= $base_path ?>/CSS/custom.css">
+    <link rel="stylesheet" href="/CSS/custom.css">
 
     <!-- <style>
     ion-icon {
@@ -37,30 +37,30 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5 text-right">
             <li class="nav-item px-2">
-              <a class="nav-link " aria-current="page" href="/<?= $base_path ?>/index.php">Home</a>
+              <a class="nav-link " aria-current="page" href="/index.php">Home</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link" href="/<?= $base_path ?>/user/service-request.php">Request</a>
+              <a class="nav-link" href="/user/service-request.php">Request</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link" href="/<?= $base_path ?>/product/products.php">Product</a>
+              <a class="nav-link" href="/product/products.php">Product</a>
             </li>
             <?php  //To check if the user is login or not
             if (!isset($_SESSION['is_login'])) {
             ?>
               <li class="nav-item px-2">
-                <a class="nav-link" aria-current="page" href="/<?= $base_path ?>/Registration.php">Registar</a>
+                <a class="nav-link" aria-current="page" href="/Registration.php">Registar</a>
               </li>
               <li class="nav-item px-2">
-                <a class="nav-link" href="/<?= $base_path ?>/login.php">Login</a>
+                <a class="nav-link" href="/login.php">Login</a>
               </li>
             <?php } else { ?>
               <li class="nav-item">
-                <a class="nav-link" href="/<?= $base_path ?>/user/user-profile.php">Profile</a>
+                <a class="nav-link" href="/user/user-profile.php">Profile</a>
               </li>
             <?php } ?>
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="/<?= $base_path ?>/Contact-us.php">Contact Us</a>
+              <a class="nav-link " aria-current="page" href="/Contact-us.php">Contact Us</a>
             </li>
           </ul>
         </div>

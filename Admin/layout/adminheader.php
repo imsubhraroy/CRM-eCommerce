@@ -17,7 +17,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
   <!-- custom css -->
-  <link rel="stylesheet" href="/<?= $base_path ?>/CSS/custom.css">
+  <link rel="stylesheet" href="/CSS/custom.css">
 
   <!-- Style for all archon tag when hovered -->
   <style>
@@ -32,7 +32,7 @@
 
 <!-- Top navbar -->
 <nav class="navbar navbar-dark fixed-top bg-info p-0 shadow">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/<?= $base_path ?>/admin/dashboard.php"><span style="color:rebeccapurple;">MeCoM</span></a>
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/admin/dashboard.php"><span style="color:rebeccapurple;">MeCoM</span></a>
  </nav>
 
  <!--start Side Bar -->
@@ -43,61 +43,61 @@
     <div class="sidebar-sticky">
      <ul class="nav flex-column">
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'dashboard') { echo 'active'; } ?> " href="/<?= $base_path ?>/admin/dashboard.php">
+       <a class="nav-link text-white <?php if(PAGE == 'dashboard') { echo 'active'; } ?> " href="/admin/dashboard.php">
         <i class="fas fa-tachometer-alt"></i>
         Dashboard
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'work') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/work-order.php">
+       <a class="nav-link text-white <?php if(PAGE == 'work') { echo 'active'; } ?>" href="/admin/work-order.php">
         <i class="fab fa-accessible-icon"></i>
         Work Order
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'request') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/user-request.php">
+       <a class="nav-link text-white <?php if(PAGE == 'request') { echo 'active'; } ?>" href="/admin/user-request.php">
         <i class="fas fa-align-center"></i>
         Requests
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'assets') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/products.php">
+       <a class="nav-link text-white <?php if(PAGE == 'assets') { echo 'active'; } ?>" href="/admin/products.php">
         <i class="fas fa-database"></i>
         Assets
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'technician') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/technician.php">
+       <a class="nav-link text-white <?php if(PAGE == 'technician') { echo 'active'; } ?>" href="/admin/technician.php">
         <i class="fab fa-teamspeak"></i>
         Technician
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'requesters') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/requester.php">
+       <a class="nav-link text-white <?php if(PAGE == 'requesters') { echo 'active'; } ?>" href="/admin/requester.php">
         <i class="fas fa-users"></i>
         Requester
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'bookingdetails') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/booking-details.php">
+       <a class="nav-link text-white <?php if(PAGE == 'bookingdetails') { echo 'active'; } ?>" href="/admin/booking-details.php">
         <i class="fas fa-users"></i>
         Product Booking Details
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'sellreport') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/sell-report.php">
+       <a class="nav-link text-white <?php if(PAGE == 'sellreport') { echo 'active'; } ?>" href="/admin/sell-report.php">
         <i class="fas fa-table"></i>
         Sell Report
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white <?php if(PAGE == 'workreport') { echo 'active'; } ?>" href="/<?= $base_path ?>/admin/work-report.php">
+       <a class="nav-link text-white <?php if(PAGE == 'workreport') { echo 'active'; } ?>" href="/admin/work-report.php">
         <i class="fas fa-table"></i>
         Work Report
        </a>
       </li>
       <li class="nav-item">
-       <a class="nav-link text-white" href="/<?= $base_path ?>/logout.php">
+       <a class="nav-link text-white" href="/logout.php">
         <i class="fas fa-sign-out-alt"></i>
         Logout
        </a>

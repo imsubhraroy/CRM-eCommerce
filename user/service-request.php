@@ -50,7 +50,7 @@ if (isset($msg)) {
 <div class="col-md-12 col-11  mt-1 mb-3 ms-1 ">
   <div class="row g-0">
     <div class="col-md-4  mx-sm-auto mt-2">
-      <img src="/<?= $base_path ?>/IMAGES/Banner.png" class="img-fluid rounded-start shadow-sm" alt="...">
+      <img src="/IMAGES/Banner.png" class="img-fluid rounded-start shadow-sm" alt="...">
     </div>
     <div class="col-md-6 mt-3 text-start ">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia repellat quis minus eligendi modi iusto, odio facilis itaque quaerat fugiat veniam? Nobis nam deserunt dolore facere impedit delectus ducimus alias soluta consequatur reiciendis, exercitationem dignissimos laborum aperiam error voluptatem animi rerum dolores? Quo velit suscipit commodi vel. Eveniet, officiis ducimus nostrum animi repudiandae perspiciatis earum! Perspiciatis voluptates maiores odio repellendus!</p>
@@ -61,7 +61,7 @@ if (isset($msg)) {
 <div class="col-md-12 col-11  mt-1 mb-3 ms-1 ">
   <div class="row g-0">
     <div class="col-md-4  mx-sm-auto mt-2">
-      <img src="/<?= $base_path ?>/IMAGES/homeservice.jpg" class="img-fluid rounded-start shadow-sm" alt="...">
+      <img src="/IMAGES/homeservice.jpg" class="img-fluid rounded-start shadow-sm" alt="...">
     </div>
     <div class="col-md-6 mt-3 text-start ">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia repellat quis minus eligendi modi iusto, odio facilis itaque quaerat fugiat veniam? Nobis nam deserunt dolore facere impedit delectus ducimus alias soluta consequatur reiciendis, exercitationem dignissimos laborum aperiam error voluptatem animi rerum dolores? Quo velit suscipit commodi vel. Eveniet, officiis ducimus nostrum animi repudiandae perspiciatis earum! Perspiciatis voluptates maiores odio repellendus!</p>
